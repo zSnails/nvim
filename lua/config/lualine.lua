@@ -1,8 +1,9 @@
 local currentServer = require('config.current_server').currentServer
+local seasonal = require('extras.seasonal_themes')
 
 require("lualine").setup({
     options = {
-        theme = 'kanagawa',
+        theme = seasonal.getTheme(),
         section_separators = {
             right = '\u{e0ba}',
             left = '\u{e0b8}',

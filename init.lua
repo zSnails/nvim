@@ -1,4 +1,5 @@
 ---@diagnostic disable: need-check-nil
+local seasonal = require('extras.seasonal_themes')
 
 
 -- vim.opt.syntax = "no"
@@ -47,6 +48,7 @@ require('config.completion')
 require('config.treesitter')
 require('config.orgmode')
 require('config.leap')
+require('config.seasonal')
 
 -- these highlight groups disable all diff and window separator background
 -- colors so that they're not messing with my beautiful color scheme setup
@@ -65,4 +67,6 @@ require("todo-comments").setup {
     signs = true
 }
 
-vim.cmd.colorscheme("kanagawa")
+local theme = seasonal.getTheme()
+print(theme)
+vim.cmd.colorscheme(theme)
