@@ -1,4 +1,3 @@
-
 local servers = {
     "zls",
     "nimls",
