@@ -1,4 +1,3 @@
-local serverProgress = require('config.current_server').serverProgress
 local currentServer = require('config.current_server').currentServer
 
 require("lualine").setup({
