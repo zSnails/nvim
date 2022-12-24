@@ -63,6 +63,7 @@ packer.startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
 
     -- yuck support
     use 'elkowar/yuck.vim'
@@ -89,7 +90,7 @@ packer.startup(function(use)
     use {
         'nvim-orgmode/orgmode',
         config = function()
-            require('orgmode').setup{}
+            require('orgmode').setup {}
         end
     }
 
