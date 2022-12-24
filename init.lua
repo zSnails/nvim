@@ -1,7 +1,5 @@
 ---@diagnostic disable: need-check-nil
 
--- these highlight groups disable all diff and window separator background
--- colors so that they're not messing with my beautiful color scheme setup
 
 -- vim.opt.syntax = "no"
 
@@ -50,6 +48,8 @@ require('config.treesitter')
 require('config.orgmode')
 require('config.leap')
 
+-- these highlight groups disable all diff and window separator background
+-- colors so that they're not messing with my beautiful color scheme setup
 vim.cmd [[
 highlight WinSeparator guibg=NONE
 highlight diffadded guibg=NONE
