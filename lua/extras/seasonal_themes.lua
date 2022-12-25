@@ -8,14 +8,7 @@ M.themes = {
     winter = nil
 }
 
-M.seasons = {
-    spring = "spring",
-    summer = "summer",
-    autumn = "autumn",
-    winter = "winter"
-}
-
-local function getSeason()
+function M.getSeason()
     local today = os.date("*t")
     local day = today.yday
 
@@ -49,7 +42,7 @@ function M.setTheme(season, theme)
 end
 
 function M.getTheme()
-    return M.themes[getSeason()]
+    return M.themes[M.getSeason()]
 end
 
 return M
