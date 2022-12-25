@@ -1,9 +1,17 @@
 local currentServer = require('config.current_server').currentServer
 local seasonal = require('extras.seasonal_themes')
 
+local theme = seasonal.getTheme()
+local season = seasonal.getSeason()
+
+-- TODO: find another workaround
+local function getSeason()
+    return season
+end
+
 require("lualine").setup({
     options = {
-        theme = seasonal.getTheme(),
+        theme = theme,
         section_separators = {
             right = '\u{e0ba}',
             left = '\u{e0b8}',
@@ -25,6 +33,6 @@ require("lualine").setup({
         lualine_a = { 'buffers' },
         lualine_x = { 'filetype' },
         lualine_y = { 'fileformat' },
-        lualine_z = { 'encoding' }
+        lualine_z = { getSeason }
     }
 })
