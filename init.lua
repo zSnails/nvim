@@ -38,6 +38,7 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- after plugin initialization
 require('config.plugins')
+require('config.seasonal')
 require('config.mappings')
 require('config.lualine')
 require('config.language-servers')
@@ -48,7 +49,6 @@ require('config.completion')
 require('config.treesitter')
 require('config.orgmode')
 require('config.leap')
-require('config.seasonal')
 
 -- these highlight groups disable all diff and window separator background
 -- colors so that they're not messing with my beautiful color scheme setup
