@@ -1,4 +1,4 @@
-plugins = {}
+local plugins = {}
 
 vim.cmd [[ packadd packer.nvim ]]
 
