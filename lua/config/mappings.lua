@@ -8,7 +8,6 @@ local function vnoremap(key, action)
     vim.keymap.set("v", key, action, { silent = true })
 end
 
-
 -- setting map leader
 vim.g.mapleader = " "
 
@@ -36,6 +35,12 @@ nnoremap("<leader>fb", telescope_builtins.buffers)
 nnoremap("<leader>fh", telescope_builtins.help_tags)
 nnoremap("<leader>ft", telescope_builtins.treesitter)
 nnoremap("<leader>tt", ":TodoTelescope theme=dropdown<CR>")
+
+-- Easier file navigation keymaps
+
+nnoremap("<leader>bn", ":bn<CR>")
+nnoremap("<leader>bp", ":bp<CR>")
+nnoremap("<leader>bd", ":bd<CR>")
 
 -- nerd tree mappings
 nnoremap("<C-b>", ":NERDTreeToggle<CR>")
