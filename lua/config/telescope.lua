@@ -1,19 +1,29 @@
-local telescope_builtins = require('telescope.builtin')
+function table.copy(t)
+    local u = {}
+    for k, v in pairs(t) do
+        u[k] = v
+    end
 
+    return setmetatable(u, getmetatable(t))
+end
+
+local defaultConfig = {
+    theme = "ivy",
+    initial_mode = "normal",
+    previewer = false,
+    layout_config = {
+        bottom_pane = { height = 12 }
+    },
+}
+
+local liveGrepConfig = table.copy(defaultConfig)
+liveGrepConfig["initial_mode"] = "insert"
 require('telescope').setup {
     pickers = {
-        find_files = {
-            theme = "dropdown",
-        },
-        live_grep = {
-            theme = "dropdown",
-        },
-        buffers = {
-            theme = "dropdown",
-        },
-        help_tags = {
-            theme = "dropdown",
-        },
+        find_files = defaultConfig,
+        live_grep = liveGrepConfig,
+        buffers = defaultConfig,
+        help_tags = defaultConfig,
         treesitter = {
             theme = "cursor",
         },
