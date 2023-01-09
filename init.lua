@@ -1,11 +1,8 @@
----@diagnostic disable: need-check-nil
-
--- after plugin initialization
+-- Initialize everything
 require('config.setup')
 require('config.todo-comments')
 require('config.vimspector')
 require('config.plugins')
--- require('config.seasonal')
 require('config.mappings')
 require('config.lualine')
 require('config.language-servers')

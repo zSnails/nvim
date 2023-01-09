@@ -9,7 +9,6 @@ end
 
 local defaultConfig = {
     theme = "ivy",
-    initial_mode = "normal",
     previewer = false,
     layout_config = {
         bottom_pane = { height = 12 }
@@ -27,5 +26,6 @@ require('telescope').setup {
         treesitter = {
             theme = "cursor",
         },
+        diagnostics = defaultConfig,
     }
 }

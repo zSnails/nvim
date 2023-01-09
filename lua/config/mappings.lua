@@ -35,6 +35,7 @@ nnoremap("<leader>fb", telescope_builtins.buffers)
 nnoremap("<leader>fh", telescope_builtins.help_tags)
 nnoremap("<leader>ft", telescope_builtins.treesitter)
 nnoremap("<leader>tt", ":TodoTelescope theme=ivy initial_mode=normal previewer=false layout_config={bottom_pane={height=12}}<CR>")
+nnoremap("<leader>di", telescope_builtins.diagnostics)
 
 -- Easier file navigation keymaps
 
