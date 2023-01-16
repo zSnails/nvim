@@ -14,7 +14,9 @@ vim.o.showcmd = true
 vim.o.clipboard = 'unnamed'
 vim.o.ruler = false
 vim.o.wrap = false
+vim.o.swapfile = false
 vim.o.conceallevel = 3
+vim.o.cursorline = true
 vim.g.NERDTreeMinimalUI = 1
 
 vim.o.signcolumn = "yes"

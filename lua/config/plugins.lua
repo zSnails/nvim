@@ -96,6 +96,7 @@ packer.startup(function(use)
 
     use 'ggandor/leap.nvim'
 
+    use 'windwp/nvim-autopairs'
 end)
 
 
