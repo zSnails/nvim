@@ -54,7 +54,7 @@ packer.startup(function(use)
     -- kanagawa theme
     use "rebelot/kanagawa.nvim"
 
-    -- nightgly theme
+    -- nightfly theme
     use 'bluz71/vim-nightfly-guicolors'
 
     -- hex colors
