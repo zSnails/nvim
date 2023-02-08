@@ -22,3 +22,12 @@ require("nvim-treesitter.configs").setup {
 
     ensure_installed = { 'org' },
 }
+
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+parser_config.porth = {
+    install_info = {
+        url = "~/projects/tree-sitter-parsers/tree-sitter-porth",
+        files = {"src/parser.c"},
+    }
+}
