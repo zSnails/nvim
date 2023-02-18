@@ -5,7 +5,6 @@ vim.cmd [[ packadd packer.nvim ]]
 local packer = require('packer')
 
 packer.startup(function(use)
-
     use 'wbthomason/packer.nvim'
     use 'ryanoasis/vim-devicons'
     use {
@@ -88,16 +87,32 @@ packer.startup(function(use)
     use 'tjdevries/colorbuddy.vim'
     use 'bkegley/gloombuddy'
 
-    use {
-        'nvim-orgmode/orgmode',
-        config = function()
-            require('orgmode').setup {}
-        end
-    }
-
     use 'ggandor/leap.nvim'
 
     use 'windwp/nvim-autopairs'
+
+    -- neorg config
+    use {
+        'nvim-neorg/neorg',
+        -- ft = "norg",
+        requires = 'nvim-lua/plenary.nvim',
+        -- run = ":Neorg sync-parsers",
+        -- config = function()
+        --     require('neorg').setup {
+        --         load = {
+        --             ["core.defaults"] = {},
+        --             ["core.neorg.concealer"] = {},
+        --             ["core.neorg.dirman"] = {
+        --                 config = {
+        --                     workspaces = {
+        --                         notes = "~/projects/notes/notes",
+        --                     },
+        --                 }
+        --             },
+        --         },
+        --     }
+        -- end,
+    }
 end)
 
 

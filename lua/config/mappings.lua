@@ -10,6 +10,7 @@ end
 
 -- setting map leader
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- moving lines in visual mode
 
