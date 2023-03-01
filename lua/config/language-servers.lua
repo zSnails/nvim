@@ -10,7 +10,7 @@ local servers = {
     "jedi_language_server",
     "sumneko_lua",
     "clangd",
-    "rls",
+    "rust_analyzer",
     "tsserver",
 }
 
