@@ -36,7 +36,7 @@ packer.startup(function(use)
     use 'dylanaraps/wal.vim'
 
     -- doki themes
-    use 'doki-theme/doki-theme-vim'
+    -- use 'doki-theme/doki-theme-vim'
 
     -- tokyo night theme
     use 'folke/tokyonight.nvim'
