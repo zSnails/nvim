@@ -36,8 +36,8 @@ highlight diffremoved guibg=NONE
 
 vim.cmd.colorscheme("kanagawa")
 
-vim.filetype.add({
-    extension = {
-        porth = 'porth',
-    },
-})
+-- vim.filetype.add({
+--     extension = {
+--         porth = 'porth',
+--     },
+-- })

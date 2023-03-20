@@ -1,8 +1,8 @@
 -- Initialize everything
 require('config.setup')
-require('config.todo-comments')
-require('config.vimspector')
 require('config.plugins')
+require('config.vimspector')
+require('config.todo-comments')
 require('config.mappings')
 require('config.lualine')
 require('config.language-servers')
