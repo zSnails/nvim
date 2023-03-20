@@ -8,7 +8,7 @@ local servers = {
     "gopls",
     "emmet_ls",
     "jedi_language_server",
-    "sumneko_lua",
+    "lua_ls",
     "clangd",
     "rust_analyzer",
     "tsserver",
