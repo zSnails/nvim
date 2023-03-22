@@ -17,7 +17,6 @@ vim.o.wrap = false
 vim.o.swapfile = true -- never disable this again
 vim.o.conceallevel = 3
 vim.o.cursorline = true
-vim.g.NERDTreeMinimalUI = 1
 
 vim.o.signcolumn = "yes"
 
@@ -35,9 +34,3 @@ highlight diffremoved guibg=NONE
 ]]
 
 vim.cmd.colorscheme("kanagawa")
-
--- vim.filetype.add({
---     extension = {
---         porth = 'porth',
---     },
--- })
