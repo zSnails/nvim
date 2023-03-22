@@ -6,18 +6,22 @@ local packer = require('packer')
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'ryanoasis/vim-devicons'
+
+    use {
+        'romgrk/barbar.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use 'savq/melange'
 
-    use 'preservim/nerdtree'
-    -- TODO: check if they've updated the plugin and fixed
-    -- the invalid characters in group names
-    -- use 'tiagofumo/vim-nerdtree-syntax-highlight'
-    use 'johnstef99/vim-nerdtree-syntax-highlight'
+    use 'savq/melange'
 
     use 'puremourning/vimspector'
 
@@ -94,24 +98,7 @@ packer.startup(function(use)
     -- neorg config
     use {
         'nvim-neorg/neorg',
-        -- ft = "norg",
         requires = 'nvim-lua/plenary.nvim',
-        -- run = ":Neorg sync-parsers",
-        -- config = function()
-        --     require('neorg').setup {
-        --         load = {
-        --             ["core.defaults"] = {},
-        --             ["core.neorg.concealer"] = {},
-        --             ["core.neorg.dirman"] = {
-        --                 config = {
-        --                     workspaces = {
-        --                         notes = "~/projects/notes/notes",
-        --                     },
-        --                 }
-        --             },
-        --         },
-        --     }
-        -- end,
     }
 end)
 
