@@ -10,10 +10,10 @@ I will be updating this with more stuff as time goes on.
 
 - vim-devicons
 - nvim-web-devicons
+- barbar
 - lualine
 - melange
-- nerdtree
-- vim-nerdtree-syntax-highlight
+- nvimtree
 - vimspector
 - presence.nvim
 - nvim-lspconfig
@@ -89,8 +89,8 @@ The leader key I use is just the space key " "
 
 ##### Plugin keybinds
 
-###### plugin: nerdtree
-- <kbd>control</kbd>+<kbd>b</kbd> `Toggle nerdtree`
+###### plugin: nvimtree
+- <kbd>control</kbd>+<kbd>b</kbd> `Toggle nvimtree`
 
 ###### plugin: todo-comments
 - <kbd>]</kbd><kbd>t</kbd> `Jump to the next todo comment`
