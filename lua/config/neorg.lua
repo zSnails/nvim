@@ -10,7 +10,8 @@ require('neorg').setup {
                 workspaces = {
                     notes = "~/projects/neorg/notes",
                     personal_notes = "~/projects/neorg/pnotes",
-                    ambiente_humano = "~/projects/academic/ambiente_humano/neorg"
+                    ambiente_humano = "~/projects/academic/ambiente_humano/neorg",
+                    asistencia = "~/projects/academic/asistencias/biblioteca"
                 }
             }
         }
