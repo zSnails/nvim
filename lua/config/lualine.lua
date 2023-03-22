@@ -1,13 +1,4 @@
 local currentServer = require('config.current_server').currentServer
-local seasonal = require('extras.seasonal_themes')
-
--- local theme = seasonal.getTheme()
--- local season = seasonal.getSeason()
-
--- TODO: find another workaround
--- local function getSeason()
---     return season
--- end
 
 require("lualine").setup({
     options = {
@@ -29,10 +20,4 @@ require("lualine").setup({
         lualine_y = { 'location' },
         lualine_z = { 'progress' }
     },
-    tabline = {
-        lualine_a = { 'buffers' },
-        lualine_x = { 'filetype' },
-        lualine_y = { 'fileformat' },
-        -- lualine_z = 
-    }
 })
