@@ -45,8 +45,9 @@ nmap("<leader>bp", ":bp<CR>")
 nmap("<leader>bd", ":bd<CR>")
 nmap("<leader>bc", ":clo<CR>")
 
--- nerd tree mappings
-nmap("<C-b>", ":NERDTreeToggle<CR>")
+-- NvimTree mappings
+nmap("<C-b>", ":NvimTreeFindFile<CR>")
+nmap("<A-b>", ":NvimTreeToggle<CR>")
 
 -- lsp mapping functions
 function mappings.onAttachFunc()
