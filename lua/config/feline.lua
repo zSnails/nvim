@@ -43,14 +43,16 @@ local mode_theme = {
 local component = {}
 
 component.vim_mode = {
-    provider = function()
-        return vim.api.nvim_get_mode().mode:upper()
-    end,
+    provider = ' ',
+    -- function()
+    --     return vim.api.nvim_get_mode().mode:upper()
+    -- end,
+
     hl = function()
         return {
-            fg = "bg",
-            bg = require("feline.providers.vi_mode").get_mode_color(),
-            style = "bold",
+            bg = "gray",
+            fg = require("feline.providers.vi_mode").get_mode_color(),
+            -- style = "bold",
             name = "NeovimModeHLColor",
         }
     end,
@@ -159,7 +161,8 @@ component.lsp = {
                 local content = string.format("%%<%s", spinners[frame + 1])
                 return content or ""
             else
-                return "לּ LSP"
+                -- return "לּ LSP"
+                return "  " .. clients[1].name
             end
         end
         return ""
@@ -228,10 +231,10 @@ component.scroll_bar = {
 
         if position <= 5 then
             ---@diagnostic disable-next-line: cast-local-type
-            position = " TOP"
+            position = " TOP"
         elseif position >= 95 then
             ---@diagnostic disable-next-line: cast-local-type
-            position = " BOT"
+            position = " BOT"
         else
             ---@diagnostic disable-next-line: cast-local-type
             position = chars[math.floor(line_ratio * #chars)] .. position
@@ -269,10 +272,8 @@ component.scroll_bar = {
 
 local left = {
     component.vim_mode,
-    component.separator,
     component.file_type,
     component.lsp,
-    component.separator,
     component.git_branch,
     component.git_add,
     component.git_delete,

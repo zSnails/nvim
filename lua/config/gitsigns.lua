@@ -1,11 +1,12 @@
 local present, gitsigns = pcall(require, 'gitsigns')
-
 if not present then
     return
 end
-
 gitsigns.setup {
-    on_attach = function(bufnr)
+    signs = {
+    },
+
+    on_attach =function(bufnr)
         local gs = package.loaded.gitsigns
 
         local function map(mode, l, r, opts)
