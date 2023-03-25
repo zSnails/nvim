@@ -90,7 +90,10 @@ The leader key I use is just the space key " "
 ##### Plugin keybinds
 
 ###### plugin: nvimtree
-- <kbd>control</kbd>+<kbd>b</kbd> `Toggle nvimtree`
+- <kbd>control</kbd>+<kbd>b</kbd> `Open nvimtree`
+- <kbd>alt</kbd>+<kbd>b</kbd> `Toggle nvimtree`
+
+> There's a reason these are 2 separate keybinds
 
 ###### plugin: todo-comments
 - <kbd>]</kbd><kbd>t</kbd> `Jump to the next todo comment`
