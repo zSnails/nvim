@@ -14,7 +14,7 @@ I will be updating this with more stuff as time goes on.
 - lualine
 - melange
 - nvimtree
-- vimspector
+<!-- - vimspector -->
 - presence.nvim
 - nvim-lspconfig
 - vim-commentary
