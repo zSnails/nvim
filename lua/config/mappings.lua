@@ -20,23 +20,29 @@ vmap("K", ":m '<-2<CR>gv=gv")
 
 -- todo comments
 
-local todoComments = require('todo-comments')
+local installed, todoComments = pcall(require, 'todo-comments')
 
-nmap("]t", todoComments.jump_next)
-nmap("[t", todoComments.jump_prev)
-
+if installed then
+    nmap("]t", todoComments.jump_next)
+    nmap("[t", todoComments.jump_prev)
+end
 -- todo list mappings
 nmap("<leader>ct", ":TodoLocList<CR>")
 
 -- fuzzy finder mappings
-local telescope_builtins = require('telescope.builtin')
-nmap("<leader>ff", telescope_builtins.find_files)
-nmap("<leader>fg", telescope_builtins.live_grep)
-nmap("<leader>fb", telescope_builtins.buffers)
-nmap("<leader>fh", telescope_builtins.help_tags)
-nmap("<leader>ft", telescope_builtins.treesitter)
-nmap("<leader>tt", ":TodoTelescope theme=ivy initial_mode=normal previewer=false layout_config={bottom_pane={height=12}}<CR>")
-nmap("<leader>di", telescope_builtins.diagnostics)
+---@diagnostic disable-next-line: redefined-local
+local installed, telescope_builtins = pcall(require, 'telescope.builtin')
+
+if installed then
+    nmap("<leader>ff", telescope_builtins.find_files)
+    nmap("<leader>fg", telescope_builtins.live_grep)
+    nmap("<leader>fb", telescope_builtins.buffers)
+    nmap("<leader>fh", telescope_builtins.help_tags)
+    nmap("<leader>ft", telescope_builtins.treesitter)
+    nmap("<leader>tt",
+        ":TodoTelescope theme=ivy initial_mode=normal previewer=false layout_config={bottom_pane={height=12}}<CR>")
+    nmap("<leader>di", telescope_builtins.diagnostics)
+end
 
 -- Easier file navigation keymaps
 

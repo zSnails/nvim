@@ -1,3 +1,9 @@
+local installed, telescope = pcall(require, 'telescope')
+
+if not installed then
+    return
+end
+
 function table.copy(t)
     local u = {}
     for k, v in pairs(t) do
@@ -17,7 +23,8 @@ local defaultConfig = {
 
 local liveGrepConfig = table.copy(defaultConfig)
 liveGrepConfig["initial_mode"] = "insert"
-require('telescope').setup {
+
+telescope.setup {
     pickers = {
         find_files = defaultConfig,
         live_grep = liveGrepConfig,

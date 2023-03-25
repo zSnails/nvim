@@ -1,4 +1,10 @@
-require("nvim-treesitter.configs").setup {
+local installed, tree_sitter = pcall(require, 'nvim-treesitter.configs')
+
+if not installed then
+    return
+end
+
+tree_sitter.setup {
     textobjects = {
         select = {
             enable = true,
@@ -17,10 +23,7 @@ require("nvim-treesitter.configs").setup {
     },
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = { 'org' },
     },
-
-    ensure_installed = { 'org' },
 }
 
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
@@ -28,6 +31,6 @@ local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 parser_config.porth = {
     install_info = {
         url = "~/projects/tree-sitter-parsers/tree-sitter-porth",
-        files = {"src/parser.c"},
+        files = { "src/parser.c" },
     }
 }

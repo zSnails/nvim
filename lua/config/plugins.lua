@@ -2,7 +2,11 @@ local plugins = {}
 
 vim.cmd [[ packadd packer.nvim ]]
 
-local packer = require('packer')
+local installed, packer = pcall(require, 'packer')
+
+if not installed then
+    require('config.bootstrap').install()
+end
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
@@ -17,13 +21,11 @@ packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
 
-    use {
-        'nvim-lualine/lualine.nvim',
-    }
+    -- use 'nvim-lualine/lualine.nvim'
+
+    use 'feline-nvim/feline.nvim'
 
     use 'savq/melange'
-
-    use 'puremourning/vimspector'
 
     use 'andweeb/presence.nvim'
 

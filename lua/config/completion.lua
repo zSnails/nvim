@@ -1,3 +1,10 @@
+local cinstalled, cmp = pcall(require, 'cmp')
+local linstalled, luasnip = pcall(require, 'luasnip')
+
+if not (cinstalled and linstalled) then
+    return
+end
+
 local kind_icons = {
     Text = "",
     Method = "",
@@ -26,9 +33,7 @@ local kind_icons = {
     TypeParameter = ""
 }
 
-local cmp = require('cmp')
 
-local luasnip = require('luasnip')
 cmp.setup({
     formatting = {
         format = function(entry, vim_item)
@@ -72,6 +77,8 @@ cmp.setup.filetype('gitcommit', {
     })
 })
 
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local installed, cmp_autopairs = pcall(require, 'nvim-autopairs.completion.cmp')
 
-cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+if installed then
+    cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+end

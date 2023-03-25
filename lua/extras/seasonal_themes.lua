@@ -30,7 +30,6 @@ function M.setDefaultTheme(theme)
     -- also it didn't even iterate through it, my
     -- hipothesis is that it's due to all the values being
     -- nil
-
     M.themes.autumn = theme
     M.themes.spring = theme
     M.themes.summer = theme

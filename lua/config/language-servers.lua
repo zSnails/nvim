@@ -20,7 +20,11 @@ capabilities.diagnostic = true
 
 local onAttachFunc = require('config.mappings').onAttachFunc
 
-local lsConf = require('lspconfig')
+local present, lsConf = pcall(require, 'lspconfig')
+
+if not present then
+    return
+end
 
 lsConf.gdscript.setup {
     capabilities = capabilities,
