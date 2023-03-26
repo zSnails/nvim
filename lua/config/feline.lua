@@ -262,8 +262,8 @@ component.scroll_bar = {
         end
         return {
             fg = fg,
-            style = "bold",
-            bg = "bg",
+            style = style,
+            bg = "gray",
         }
     end,
     left_sep = "block",

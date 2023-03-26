@@ -2,6 +2,7 @@
 
 require('config.plugins')
 require('config.setup')
+require('config.presence')
 require('config.feline')
 require('config.todo-comments')
 require('config.mappings')
