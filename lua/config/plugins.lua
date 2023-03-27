@@ -11,6 +11,8 @@ end
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    use 'adelarsq/neofsharp.vim'
+
     use {
         'romgrk/barbar.nvim',
         requires = { 'nvim-tree/nvim-web-devicons' }
