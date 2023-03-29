@@ -25,7 +25,8 @@ packer.startup(function(use)
 
     -- use 'nvim-lualine/lualine.nvim'
 
-    use 'feline-nvim/feline.nvim'
+    use 'freddiehaddad/feline.nvim'
+
 
     use 'savq/melange'
 
