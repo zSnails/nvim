@@ -16,7 +16,15 @@ local servers = {
 }
 
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = nil
+local found, nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+
+if found then
+    capabilities = nvim_lsp.default_capabilities()
+else
+    capabilities = vim.lsp.protocol.make_client_capabilities()
+end
+
 capabilities.diagnostic = true
 
 local onAttachFunc = require('config.mappings').onAttachFunc
