@@ -3,7 +3,8 @@
 local version = vim.version()
 
 if version.minor < 8 then
-    vim.api.nvim_err_writeln("This configuration requires nvim 0.8+, but you're using 0." .. version.minor)
+    vim.api.nvim_err_writeln(string.format("This configuration requires nvim 0.8+, but you're using %d.%d", version
+        .major, version.minor))
     return
 end
 
