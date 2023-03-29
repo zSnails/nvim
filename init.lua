@@ -1,5 +1,12 @@
 -- Initialize everything
 
+local version = vim.version()
+
+if version.minor < 8 then
+    vim.api.nvim_err_writeln("This configuration requires nvim 0.8+, but you're using 0." .. version.minor)
+    return
+end
+
 require('config.plugins')
 require('config.setup')
 require('config.presence')
