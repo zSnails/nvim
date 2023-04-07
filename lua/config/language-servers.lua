@@ -55,6 +55,7 @@ lsConf.gdscript.setup {
 
 for _, server in ipairs(servers) do
     lsConf[server].setup {
+        enable_editorconfig_support = true,
         on_attach = onAttachFunc,
         capabilities = capabilities,
         settings = {
@@ -73,10 +74,6 @@ for _, server in ipairs(servers) do
                     enable = false,
                 },
             },
-            Python = {
-                provideFormatter = true,
-                pythonFormatter = "black"
-            }
         }
     }
 end
