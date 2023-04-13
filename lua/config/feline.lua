@@ -43,16 +43,17 @@ local mode_theme = {
 local component = {}
 
 component.vim_mode = {
-    provider = ' ',
-    -- function()
-    --     return vim.api.nvim_get_mode().mode:upper()
-    -- end,
-
+    -- provider = ' ',
+    provider = function()
+        return vim.api.nvim_get_mode().mode:upper()
+    end,
     hl = function()
         return {
-            bg = "gray",
-            fg = require("feline.providers.vi_mode").get_mode_color(),
-            -- style = "bold",
+            -- bg = "gray",
+            -- fg = require("feline.providers.vi_mode").get_mode_color(),
+            fg = "gray",
+            bg = require("feline.providers.vi_mode").get_mode_color(),
+            style = "bold",
             name = "NeovimModeHLColor",
         }
     end,
@@ -162,7 +163,7 @@ component.lsp = {
                 return content or ""
             else
                 -- return "לּ LSP"
-                return "  " .. clients[1].name
+                return " " .. clients[1].name:upper()
             end
         end
         return ""
@@ -175,6 +176,19 @@ component.lsp = {
             style = "bold",
         }
     end,
+    left_sep = "",
+    right_sep = "block",
+}
+
+component.file_size = {
+    provider = {
+        name = "file_size",
+    },
+    hl = {
+        fg = "fg",
+        bg = "gray",
+        style = "bold",
+    },
     left_sep = "",
     right_sep = "block",
 }
@@ -273,6 +287,7 @@ component.scroll_bar = {
 local left = {
     component.vim_mode,
     component.file_type,
+    component.file_size,
     component.lsp,
     component.git_branch,
     component.git_add,
