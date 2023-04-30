@@ -36,13 +36,10 @@ local kind_icons = {
 
 cmp.setup({
     formatting = {
-        format = function(entry, vim_item)
-            vim_item.kind = string.format('%s <%s>', kind_icons[vim_item.kind], vim_item.kind)
-            -- vim_item.kind = string.format('<%s>', vim_item.kind)
-            vim_item.menu = ({
-                nvim_lsp = "lsp",
-                luasnip = "snippet",
-            })[entry.source.name]
+        fields = { "kind", "abbr", "menu" },
+        format = function(_, vim_item)
+            vim_item.menu = vim_item.kind:upper()
+            vim_item.kind = kind_icons[vim_item.kind]
             return vim_item
         end
     },
@@ -50,10 +47,6 @@ cmp.setup({
         expand = function(args)
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
         end,
-    },
-    window = {
-        -- completion = cmp.config.window.bordered(),
-        -- documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),

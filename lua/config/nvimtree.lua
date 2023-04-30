@@ -5,4 +5,4 @@ if not present then
     return
 end
 
-nvim_tree.setup()
+nvim_tree.setup {}

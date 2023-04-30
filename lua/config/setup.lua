@@ -16,7 +16,6 @@ vim.o.ruler = false
 vim.o.wrap = false
 vim.o.swapfile = true -- never disable this again
 vim.o.conceallevel = 3
-vim.o.cursorline = true
 
 vim.o.signcolumn = "yes"
 

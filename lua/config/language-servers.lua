@@ -6,7 +6,7 @@ local servers = {
     "phpactor",
     "jdtls",
     "gopls",
-    "emmet_ls",
+    -- "emmet_ls",
     "jedi_language_server",
     "lua_ls",
     "clangd",
