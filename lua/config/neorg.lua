@@ -10,8 +10,8 @@ neorg.setup {
         ["core.export"] = {},
         ["core.export.markdown"] = {},
         ["core.integrations.treesitter"] = {},
-        ["core.norg.concealer"] = {},
-        ["core.norg.dirman"] = {
+        ["core.concealer"] = {},
+        ["core.dirman"] = {
             config = {
                 workspaces = {
                     notes = "~/projects/neorg/notes",

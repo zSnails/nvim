@@ -6,20 +6,20 @@ if not present then
 end
 
 local theme = {
-    aqua = "#7AB0DF",
-    bg = "#1C212A",
-    blue = "#5FB0FC",
-    cyan = "#70C0BA",
-    darkred = "#FB7373",
-    fg = "#C7C7CA",
-    gray = "#222730",
-    green = "#79DCAA",
+    aqua = "#82aaff",
+    bg = "#011627",
+    blue = "#5e97ec",
+    cyan = "#7fdbca",
+    darkred = "#fc514e",
+    fg = "#b2b2b2",
+    gray = "#14364c",
+    green = "#a1cd5e",
     lime = "#54CED6",
-    orange = "#FFD064",
-    pink = "#D997C8",
-    purple = "#C397D8",
-    red = "#F87070",
-    yellow = "#FFE59E"
+    orange = "#f78c6c",
+    pink = "#ff5874",
+    purple = "#ae81ff",
+    red = "#ff5874",
+    yellow = "#ffcb8b"
 }
 
 local mode_theme = {
@@ -43,22 +43,24 @@ local mode_theme = {
 local component = {}
 
 component.vim_mode = {
-    -- provider = ' ',
-    provider = function()
-        return vim.api.nvim_get_mode().mode:upper()
-    end,
+    provider = ' ',
+
+    -- provider = function()
+    --     return vim.api.nvim_get_mode().mode:upper()
+    -- end,
+
     hl = function()
         return {
-            -- bg = "gray",
-            -- fg = require("feline.providers.vi_mode").get_mode_color(),
-            fg = "gray",
-            bg = require("feline.providers.vi_mode").get_mode_color(),
+            bg = "gray",
+            fg = require("feline.providers.vi_mode").get_mode_color(),
+            -- fg = "gray",
+            -- bg = require("feline.providers.vi_mode").get_mode_color(),
             style = "bold",
             name = "NeovimModeHLColor",
         }
     end,
     left_sep = "block",
-    right_sep = "block",
+    -- right_sep = "block",
 }
 
 component.git_branch = {
