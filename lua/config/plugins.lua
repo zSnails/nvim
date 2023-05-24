@@ -67,6 +67,7 @@ packer.startup(function(use)
 
     -- hex colors
     use 'chrisbra/Colorizer'
+    use 'dylon/vim-antlr'
 
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'

@@ -7,7 +7,8 @@ local servers = {
     "jdtls",
     "gopls",
     -- "emmet_ls",
-    "jedi_language_server",
+    -- "jedi_language_server",
+    "pyright",
     "lua_ls",
     "clangd",
     "rust_analyzer",
@@ -29,13 +30,13 @@ capabilities.diagnostic = true
 
 local onAttachFunc = require('config.mappings').onAttachFunc
 
-local present, lsConf = pcall(require, 'lspconfig')
+local present, lsp_config = pcall(require, 'lspconfig')
 
 if not present then
     return
 end
 
-lsConf.gdscript.setup {
+lsp_config.gdscript.setup {
     capabilities = capabilities,
     on_attach = function(client)
         onAttachFunc() -- setup normal keybinds
@@ -54,7 +55,7 @@ lsConf.gdscript.setup {
 }
 
 for _, server in ipairs(servers) do
-    lsConf[server].setup {
+    lsp_config[server].setup {
         enable_editorconfig_support = true,
         on_attach = onAttachFunc,
         capabilities = capabilities,
