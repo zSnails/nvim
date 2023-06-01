@@ -97,7 +97,7 @@ packer.startup(function(use)
     use 'tjdevries/colorbuddy.vim'
     use 'bkegley/gloombuddy'
 
-    use 'ggandor/leap.nvim'
+    -- use 'ggandor/leap.nvim'
 
     use 'windwp/nvim-autopairs'
 
