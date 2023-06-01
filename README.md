@@ -8,13 +8,11 @@ I will be updating this with more stuff as time goes on.
 
 # Plugins
 
-- vim-devicons
 - nvim-web-devicons
 - barbar
 - lualine
 - melange
 - nvimtree
-<!-- - vimspector -->
 - presence.nvim
 - nvim-lspconfig
 - vim-commentary
@@ -45,7 +43,6 @@ I will be updating this with more stuff as time goes on.
 - colorbuddy.vim
 - gloombuddy
 - orgmode
-- leap.nvim
 - nvim-autopairs
 
 # Keybinds
