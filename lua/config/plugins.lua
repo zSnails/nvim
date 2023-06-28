@@ -1,5 +1,3 @@
-local plugins = {}
-
 vim.cmd [[ packadd packer.nvim ]]
 
 local installed, packer = pcall(require, 'packer')
@@ -14,14 +12,29 @@ packer.startup(function(use)
     use 'adelarsq/neofsharp.vim'
 
     use {
+        'nvim-tree/nvim-web-devicons',
+        tag = 'nerd-v2-compat'
+    }
+
+    -- use { "giusgad/pets.nvim",
+    --     requires = {
+    --         "giusgad/hologram.nvim",
+    --         "MunifTanjim/nui.nvim",
+    --     }
+    -- }
+
+    use {
         'romgrk/barbar.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' }
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        -- after = "nvim-tree/nvim-web-devicons"
     }
 
     use {
         'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons' }
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        -- after = "nvim-tree/nvim-web-devicons"
     }
+
 
     -- use 'nvim-lualine/lualine.nvim'
 
@@ -107,6 +120,3 @@ packer.startup(function(use)
         requires = 'nvim-lua/plenary.nvim',
     }
 end)
-
-
-return plugins

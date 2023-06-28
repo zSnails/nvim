@@ -1,4 +1,4 @@
----depends on https://github.com/feline-nvim/feline.nvim
+---depcends on https://github.com/feline-nvim/feline.nvim
 local present, feline = pcall(require, "feline")
 
 if not present then
@@ -296,7 +296,8 @@ local left = {
     component.git_delete,
     component.git_change,
 }
-local middle = {}
+local middle = {
+}
 local right = {
     component.diagnostic_errors,
     component.diagnostic_warnings,
