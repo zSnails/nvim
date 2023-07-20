@@ -4,7 +4,7 @@ if not present then
     return
 end
 
-local currentServer = require('config.current_server').currentServer
+local current_server = require('config.current_server').current_server
 -- NOTE: the only reason I'm not deleting this
 -- file is because feline is archived, so it might stop
 -- working forever. I might as well maintain it.
@@ -16,7 +16,7 @@ end
 
 lualine.setup({
     options = {
-        theme = "kanagawa",
+        theme = "auto",
         section_separators = '',
         component_separators = '',
         -- section_separators = {
@@ -31,7 +31,7 @@ lualine.setup({
     },
     sections = {
         lualine_a = {},
-        lualine_b = { currentServer, 'branch' },
+        lualine_b = { current_server, 'branch' },
         lualine_c = { 'diff' },
         lualine_x = { 'diagnostics' },
         lualine_y = { 'location', 'progress' },

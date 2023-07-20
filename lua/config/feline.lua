@@ -5,21 +5,38 @@ if not present then
     return
 end
 
+-- local theme = {
+--     aqua = "#82aaff",
+--     bg = "#011627",
+--     blue = "#5e97ec",
+--     cyan = "#7fdbca",
+--     darkred = "#fc514e",
+--     fg = "#b2b2b2",
+--     gray = "#14364c",
+--     green = "#a1cd5e",
+--     lime = "#54CED6",
+--     orange = "#f78c6c",
+--     pink = "#ff5874",
+--     purple = "#ae81ff",
+--     red = "#ff5874",
+--     yellow = "#ffcb8b"
+-- }
+
 local theme = {
-    aqua = "#82aaff",
-    bg = "#011627",
+    aqua = "#b5179e",
+    bg = "#0101d1e",
     blue = "#5e97ec",
-    cyan = "#7fdbca",
-    darkred = "#fc514e",
-    fg = "#b2b2b2",
-    gray = "#14364c",
-    green = "#a1cd5e",
-    lime = "#54CED6",
-    orange = "#f78c6c",
-    pink = "#ff5874",
-    purple = "#ae81ff",
-    red = "#ff5874",
-    yellow = "#ffcb8b"
+    cyan = "#0650b2",
+    darkred = "#b5179e",
+    fg = "#f6f6f6",
+    gray = "#0650b2",
+    green = "#94f377",
+    lime = "#4cc9f0",
+    orange = "#ffca38",
+    pink = "#ff0a78",
+    purple = "#ff0a78",
+    red = "#ef0671",
+    yellow = "#efef06"
 }
 
 local mode_theme = {
@@ -27,13 +44,13 @@ local mode_theme = {
     ["OP"] = theme.cyan,
     ["INSERT"] = theme.aqua,
     ["VISUAL"] = theme.yellow,
-    ["LINES"] = theme.darkred,
+    ["LINES"] = theme.purple,
     ["BLOCK"] = theme.orange,
     ["REPLACE"] = theme.purple,
     ["V-REPLACE"] = theme.pink,
     ["ENTER"] = theme.pink,
     ["MORE"] = theme.pink,
-    ["SELECT"] = theme.darkred,
+    ["SELECT"] = theme.purple,
     ["SHELL"] = theme.cyan,
     ["TERM"] = theme.lime,
     ["NONE"] = theme.gray,
@@ -41,6 +58,8 @@ local mode_theme = {
 }
 
 local component = {}
+
+local provider = require("feline.providers.vi_mode")
 
 component.vim_mode = {
     provider = ' ',
@@ -52,7 +71,7 @@ component.vim_mode = {
     hl = function()
         return {
             bg = "gray",
-            fg = require("feline.providers.vi_mode").get_mode_color(),
+            fg = provider.get_mode_color(),
             -- fg = "gray",
             -- bg = require("feline.providers.vi_mode").get_mode_color(),
             style = "bold",
@@ -70,7 +89,7 @@ component.git_branch = {
         bg = "bg",
         style = "bold",
     },
-    left_sep = "block",
+    left_sep = " ",
     right_sep = "",
 }
 
@@ -97,7 +116,7 @@ component.git_delete = {
 component.git_change = {
     provider = "git_diff_changed",
     hl = {
-        fg = "purple",
+        fg = "yellow",
         bg = "bg",
     },
     left_sep = "",

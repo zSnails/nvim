@@ -13,7 +13,7 @@ function table.copy(t)
     return setmetatable(u, getmetatable(t))
 end
 
-local defaultConfig = {
+local default_config = {
     theme = "ivy",
     previewer = false,
     layout_config = {
@@ -21,18 +21,18 @@ local defaultConfig = {
     },
 }
 
-local liveGrepConfig = table.copy(defaultConfig)
-liveGrepConfig["initial_mode"] = "insert"
+local live_grep_config = table.copy(default_config)
+live_grep_config["initial_mode"] = "insert"
 
 telescope.setup {
     pickers = {
-        find_files = defaultConfig,
-        live_grep = liveGrepConfig,
-        buffers = defaultConfig,
-        help_tags = defaultConfig,
+        find_files = default_config,
+        live_grep = live_grep_config,
+        buffers = default_config,
+        help_tags = default_config,
         treesitter = {
             theme = "cursor",
         },
-        diagnostics = defaultConfig,
+        diagnostics = default_config,
     }
 }

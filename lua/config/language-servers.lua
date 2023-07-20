@@ -1,29 +1,7 @@
-local servers = {
-    "zls",
-    "nimls",
-    -- "gdscript",
-    -- "solargraph",
-    "texlab",
-    "phpactor",
-    "cssls",
-    -- "psalm",
-    "jdtls",
-    "gopls",
-    "emmet_ls",
-    -- "jedi_language_server",
-    "pyright",
-    "lua_ls",
-    "clangd",
-    "rust_analyzer",
-    "tsserver",
-    "fsautocomplete"
-}
-
-
 local capabilities = nil
-local found, nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+local cmp_nvim_installed, nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 
-if found then
+if cmp_nvim_installed then
     capabilities = nvim_lsp.default_capabilities()
 else
     capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -31,37 +9,29 @@ end
 
 capabilities.diagnostic = true
 
-local onAttachFunc = require('config.mappings').onAttachFunc
+local on_attach_func = require('config.mappings').on_attach_func
 
-local present, lsp_config = pcall(require, 'lspconfig')
+local lspconfig_installed, lsp_config = pcall(require, 'lspconfig')
 
-if not present then
+if not lspconfig_installed then
     return
 end
 
-lsp_config.gdscript.setup {
-    capabilities = capabilities,
-    on_attach = function(client)
-        onAttachFunc() -- setup normal keybinds
-        local _notify = client.notify
-        client.notify = function(method, params)
-            -- if method == 'textDocument/didClose' then
-            --     return
-            -- end
-            if method == 'workspace/didChangeConfiguration' then
-                return
-            end
-
-            _notify(method, params)
-        end
-    end
-}
-
-for _, server in ipairs(servers) do
-    lsp_config[server].setup {
-        enable_editorconfig_support = true,
-        on_attach = onAttachFunc,
-        capabilities = capabilities,
+local servers = {
+    zls = {},
+    nimls = {},
+    -- "gdscript"={},
+    -- "solargraph"={},
+    texlab = {},
+    phpactor = {},
+    cssls = {},
+    -- psalm={},
+    jdtls = {},
+    gopls = {},
+    emmet_ls = {},
+    -- jedi_language_server={},
+    pyright = {},
+    lua_ls = {
         settings = {
             Lua = {
                 runtime = {
@@ -77,7 +47,31 @@ for _, server in ipairs(servers) do
                 telemetry = {
                     enable = false,
                 },
-            },
+            }
         }
+    },
+    clangd = {},
+    rust_analyzer = {},
+    tsserver = {},
+    fsautocomplete = {},
+    gdscript = {
+        on_attach = function(client)
+            on_attach_func()
+            local _notify = client.notify
+            client.notify = function(method, params)
+                if method == 'workspace/didChangeConfiguration' then
+                    return
+                end
+                _notify(method, params)
+            end
+        end
+    },
+}
+
+for server, config in pairs(servers) do
+    lsp_config[server].setup {
+        capabilities = capabilities,
+        on_attach = config.on_attach or on_attach_func,
+        settings = servers.settings
     }
 end

@@ -16,27 +16,17 @@ packer.startup(function(use)
         tag = 'nerd-v2-compat'
     }
 
-    -- use { "giusgad/pets.nvim",
-    --     requires = {
-    --         "giusgad/hologram.nvim",
-    --         "MunifTanjim/nui.nvim",
-    --     }
-    -- }
-
     use {
         'romgrk/barbar.nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
-        -- after = "nvim-tree/nvim-web-devicons"
     }
 
     use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
-        -- after = "nvim-tree/nvim-web-devicons"
     }
 
-
-    -- use 'nvim-lualine/lualine.nvim'
+    use 'zSnails/cityscape.nvim'
 
     use 'freddiehaddad/feline.nvim'
 
@@ -56,9 +46,6 @@ packer.startup(function(use)
 
     -- pywal theme
     use 'dylanaraps/wal.vim'
-
-    -- doki themes
-    -- use 'doki-theme/doki-theme-vim'
 
     -- tokyo night theme
     use 'folke/tokyonight.nvim'
@@ -106,11 +93,8 @@ packer.startup(function(use)
 
     use 'lewis6991/gitsigns.nvim'
 
-    -- use 'alaviss/nim.nvim'
     use 'tjdevries/colorbuddy.vim'
     use 'bkegley/gloombuddy'
-
-    -- use 'ggandor/leap.nvim'
 
     use 'windwp/nvim-autopairs'
 

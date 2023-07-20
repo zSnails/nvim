@@ -8,7 +8,7 @@ M.themes = {
     winter = nil
 }
 
-function M.getSeason()
+function M.get_season()
     local today = os.date("*t")
     local day = today.yday
 
@@ -24,7 +24,7 @@ function M.getSeason()
     end
 end
 
-function M.setDefaultTheme(theme)
+function M.set_default_theme(theme)
     -- FIX: for some reason iterating through the
     -- table did not yield any reults whatsoever,
     -- also it didn't even iterate through it, my
@@ -36,12 +36,12 @@ function M.setDefaultTheme(theme)
     M.themes.winter = theme
 end
 
-function M.setTheme(season, theme)
+function M.set_theme(season, theme)
     M.themes[season] = theme
 end
 
-function M.getTheme()
-    return M.themes[M.getSeason()]
+function M.get_theme()
+    return M.themes[M.get_season()]
 end
 
 return M

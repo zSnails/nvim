@@ -1,4 +1,4 @@
-local mappings = {}
+local Mappings = {}
 
 local function nmap(key, action)
     vim.keymap.set("n", key, action, { silent = true })
@@ -20,20 +20,20 @@ vmap("K", ":m '<-2<CR>gv=gv")
 
 -- todo comments
 
-local installed, todoComments = pcall(require, 'todo-comments')
+local todo_comments_installed, todo_comments = pcall(require, 'todo-comments')
 
-if installed then
-    nmap("]t", todoComments.jump_next)
-    nmap("[t", todoComments.jump_prev)
+if todo_comments_installed then
+    nmap("]t", todo_comments.jump_next)
+    nmap("[t", todo_comments.jump_prev)
 end
 -- todo list mappings
 nmap("<leader>ct", ":TodoLocList<CR>")
 
 -- fuzzy finder mappings
 ---@diagnostic disable-next-line: redefined-local
-local installed, telescope_builtins = pcall(require, 'telescope.builtin')
+local telescope_installed, telescope_builtins = pcall(require, 'telescope.builtin')
 
-if installed then
+if telescope_installed then
     nmap("<leader>ff", telescope_builtins.find_files)
     nmap("<leader>fg", telescope_builtins.live_grep)
     nmap("<leader>fb", telescope_builtins.buffers)
@@ -51,12 +51,16 @@ nmap("<leader>bp", ":bp<CR>")
 nmap("<leader>bd", ":bd<CR>")
 nmap("<leader>bc", ":clo<CR>")
 
--- NvimTree mappings
-nmap("<C-b>", ":NvimTreeFindFile<CR>")
-nmap("<A-b>", ":NvimTreeToggle<CR>")
+local nvim_tree_installed, _ = pcall(require, "nvim-tree")
+
+if nvim_tree_installed then
+    -- NvimTree mappings
+    nmap("<C-b>", ":NvimTreeFindFile<CR>")
+    nmap("<A-b>", ":NvimTreeToggle<CR>")
+end
 
 -- lsp mapping functions
-function mappings.onAttachFunc()
+function Mappings.on_attach_func()
     nmap('gD', vim.lsp.buf.declaration)
     nmap('gd', vim.lsp.buf.definition)
     nmap('K', vim.lsp.buf.hover)
@@ -67,4 +71,4 @@ function mappings.onAttachFunc()
     nmap('<leader>co', vim.lsp.buf.document_symbol)
 end
 
-return mappings
+return Mappings

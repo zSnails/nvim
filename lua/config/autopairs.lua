@@ -1,9 +1,9 @@
-local present, npairs = pcall(require, 'nvim-autopairs')
+local installed, nvim_autopairs = pcall(require, 'nvim-autopairs')
 
-if not present then
+if not installed then
     return
 end
 
-npairs.setup({
-    disable_filetype = {'lisp'}
+nvim_autopairs.setup({
+    disable_filetype = { 'lisp' }
 })
