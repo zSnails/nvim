@@ -13,9 +13,9 @@ local on_attach_func = require('config.mappings').on_attach_func
 
 local lspconfig_installed, lsp_config = pcall(require, 'lspconfig')
 
-if not lspconfig_installed then
-    return
-end
+-- if not lspconfig_installed then
+--     return
+-- end
 
 local servers = {
     zls = {},
@@ -31,6 +31,9 @@ local servers = {
     emmet_ls = {},
     -- jedi_language_server={},
     pyright = {},
+    omnisharp = {
+        cmd = { "dotnet", "/usr/lib/omnisharp-roslyn/OmniSharp.dll" }
+    },
     lua_ls = {
         settings = {
             Lua = {
@@ -69,9 +72,15 @@ local servers = {
 }
 
 for server, config in pairs(servers) do
-    lsp_config[server].setup {
+    local server_table = {
         capabilities = capabilities,
-        on_attach = config.on_attach or on_attach_func,
-        settings = servers.settings
+        on_attach = on_attach_func
     }
+    local final_table = vim.tbl_extend("keep", server_table, config)
+    lsp_config[server].setup(final_table)
+    -- {
+    --     capabilities = capabilities,
+    --     on_attach = config.on_attach or on_attach_func,
+    --     settings = servers.settings,
+    -- }
 end

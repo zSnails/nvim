@@ -17,7 +17,8 @@ neorg.setup {
                     notes = "~/projects/neorg/notes",
                     personal_notes = "~/projects/neorg/pnotes",
                     ambiente_humano = "~/projects/academic/ambiente_humano/neorg",
-                    asistencia = "~/projects/academic/asistencias/biblioteca"
+                    asistencia = "~/projects/academic/asistencias/biblioteca",
+                    seminario = "~/projects/academic/seminarios/filosofico"
                 }
             }
         }

@@ -9,6 +9,8 @@ end
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    use 'alaviss/nim.nvim'
+
     use 'adelarsq/neofsharp.vim'
 
     use {
@@ -26,7 +28,12 @@ packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons' },
     }
 
-    use 'zSnails/cityscape.nvim'
+    use 'adalessa/laravel.nvim'
+
+    use {
+        'zSnails/cityscape.nvim',
+        branch = "color-update"
+    }
 
     use 'freddiehaddad/feline.nvim'
 
