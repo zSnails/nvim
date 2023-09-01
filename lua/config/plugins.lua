@@ -1,4 +1,6 @@
-vim.cmd [[ packadd packer.nvim ]]
+-- vim.cmd [[ packadd packer.nvim ]]
+
+pcall(vim.cmd, "packadd packer.nvim")
 
 local installed, packer = pcall(require, 'packer')
 

@@ -12,8 +12,8 @@ local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.n
 
 function M.install()
     vim.fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
-    vim.cmd [[ packadd packer.nvim ]]
-    vim.cmd [[ PackerSync ]]
+    pcall(vim.cmd, "packadd packer.nvim")
+    pcall(vim.cmd, "PackerSync")
 end
 
 return M
