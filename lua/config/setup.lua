@@ -26,7 +26,7 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 -- these highlight groups disable all diff and window separator background
 -- colors so that they're not messing with my beautiful color scheme setup
 
-vim.cmd [[silent! colorscheme tokyonight]]
+vim.cmd [[silent! colorscheme kanagawa]]
 
 -- uncomment this when using kanagawa or tokyonight
 
