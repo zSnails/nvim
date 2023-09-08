@@ -23,7 +23,12 @@ local servers = {
     -- "gdscript"={},
     -- "solargraph"={},
     texlab = {},
-    phpactor = {},
+    vuels = {
+        cmd = { "vls", "--stdio" }
+    },
+    phpactor = {
+        cmd = { "phpactor", "language-server", "-vvv" }
+    },
     cssls = {},
     -- psalm={},
     jdtls = {},
