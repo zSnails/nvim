@@ -13,23 +13,24 @@ local on_attach_func = require('config.mappings').on_attach_func
 
 local lspconfig_installed, lsp_config = pcall(require, 'lspconfig')
 
--- if not lspconfig_installed then
---     return
--- end
+if not lspconfig_installed then
+    return
+end
 
 local servers = {
     zls = {},
     nimls = {},
-    -- "gdscript"={},
-    -- "solargraph"={},
     texlab = {},
-    phpactor = {},
+    vuels = {
+        cmd = { "vls", "--stdio" }
+    },
+    phpactor = {
+        cmd = { "phpactor", "language-server", "-vvv" }
+    },
     cssls = {},
-    -- psalm={},
     jdtls = {},
     gopls = {},
     emmet_ls = {},
-    -- jedi_language_server={},
     pyright = {},
     omnisharp = {
         cmd = { "dotnet", "/usr/lib/omnisharp-roslyn/OmniSharp.dll" }
@@ -78,9 +79,4 @@ for server, config in pairs(servers) do
     }
     local final_table = vim.tbl_extend("keep", server_table, config)
     lsp_config[server].setup(final_table)
-    -- {
-    --     capabilities = capabilities,
-    --     on_attach = config.on_attach or on_attach_func,
-    --     settings = servers.settings,
-    -- }
 end
