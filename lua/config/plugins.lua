@@ -32,6 +32,8 @@ packer.startup(function(use)
 
     use 'adalessa/laravel.nvim'
 
+    use 'ARM9/arm-syntax-vim'
+
     use {
         'zSnails/cityscape.nvim',
         branch = "color-update"
@@ -112,4 +114,7 @@ packer.startup(function(use)
         'nvim-neorg/neorg',
         requires = 'nvim-lua/plenary.nvim',
     }
+
+    use 'tpope/vim-dadbod'
+    use 'kristijanhusak/vim-dadbod-ui'
 end)
