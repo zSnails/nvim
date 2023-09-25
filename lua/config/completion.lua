@@ -8,15 +8,15 @@ end
 local kind_icons = {
     Text = "",
     Method = "",
-    Function = "󰊕",
-    Constructor = "",
+    Function = "󰡱",
+    Constructor = "",
     Field = "",
     Variable = "󰫧",
     Class = "",
-    Interface = "",
-    Module = "",
+    Interface = "",
+    Module = "󰅪",
     Property = "",
-    Unit = "",
+    Unit = "",
     Value = "",
     Enum = "",
     Keyword = "",
@@ -32,7 +32,6 @@ local kind_icons = {
     Operator = "",
     TypeParameter = ""
 }
-
 
 cmp.setup({
     formatting = {
@@ -59,6 +58,16 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
         { name = 'buffer' },
+        { name = 'path' },
+    })
+})
+
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        { name = 'cmdline' }
     })
 })
 
