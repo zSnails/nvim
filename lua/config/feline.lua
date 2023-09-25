@@ -170,13 +170,14 @@ component.lsp = {
         local clients = vim.lsp.get_active_clients({ bufnr = 0 })
         if #clients ~= 0 then
             if progress then
+                -- NOTE: These are fira code's spinners, they might or might not work on other fonts
                 local spinners = {
-                    "◜ ",
-                    "◠ ",
-                    "◝ ",
-                    "◞ ",
-                    "◡ ",
-                    "◟ ",
+                    "\u{ee06}",
+                    "\u{ee07}",
+                    "\u{ee08}",
+                    "\u{ee09}",
+                    "\u{ee0A}",
+                    "\u{ee0B}",
                 }
                 local ms = vim.loop.hrtime() / 1000000
                 local frame = math.floor(ms / 120) % #spinners
@@ -231,36 +232,9 @@ component.file_type = {
 
 component.scroll_bar = {
     provider = function()
-        local chars = {
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-        }
+        local chars = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+            " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+            " ", " ", }
         local line_ratio = vim.api.nvim_win_get_cursor(0)[1] / vim.api.nvim_buf_line_count(0)
         local position = math.floor(line_ratio * 100)
 
