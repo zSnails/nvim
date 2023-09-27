@@ -5,39 +5,39 @@ if not present then
     return
 end
 
--- local theme = {
---     aqua = "#82aaff",
---     bg = "#011627",
---     blue = "#5e97ec",
---     cyan = "#7fdbca",
---     darkred = "#fc514e",
---     fg = "#b2b2b2",
---     gray = "#14364c",
---     green = "#a1cd5e",
---     lime = "#54CED6",
---     orange = "#f78c6c",
---     pink = "#ff5874",
---     purple = "#ae81ff",
---     red = "#ff5874",
---     yellow = "#ffcb8b"
--- }
-
 local theme = {
-    aqua = "#b5179e",
-    bg = "#0101d1e",
+    aqua = "#82aaff",
+    bg = "#011627",
     blue = "#5e97ec",
-    cyan = "#0650b2",
-    darkred = "#b5179e",
-    fg = "#f6f6f6",
-    gray = "#0650b2",
-    green = "#94f377",
-    lime = "#4cc9f0",
-    orange = "#ffca38",
-    pink = "#ff0a78",
-    purple = "#ff0a78",
-    red = "#ef0671",
-    yellow = "#efef06"
+    cyan = "#7fdbca",
+    darkred = "#fc514e",
+    fg = "#b2b2b2",
+    gray = "#14364c",
+    green = "#a1cd5e",
+    lime = "#54CED6",
+    orange = "#f78c6c",
+    pink = "#ff5874",
+    purple = "#ae81ff",
+    red = "#ff5874",
+    yellow = "#ffcb8b"
 }
+
+-- local theme = {
+--     aqua = "#b5179e",
+--     bg = "#0101d1e",
+--     blue = "#5e97ec",
+--     cyan = "#0650b2",
+--     darkred = "#b5179e",
+--     fg = "#f6f6f6",
+--     gray = "#0650b2",
+--     green = "#94f377",
+--     lime = "#4cc9f0",
+--     orange = "#ffca38",
+--     pink = "#ff0a78",
+--     purple = "#ff0a78",
+--     red = "#ef0671",
+--     yellow = "#efef06"
+-- }
 
 local mode_theme = {
     ["NORMAL"] = theme.green,
