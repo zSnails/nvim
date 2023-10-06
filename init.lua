@@ -15,6 +15,7 @@ require('config.feline')
 require('config.todo-comments')
 require('config.mappings')
 require('config.language-servers')
+
 require('config.gitsigns')
 require('config.telescope')
 require('config.nvimtree')
