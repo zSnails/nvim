@@ -8,20 +8,4 @@ if not vim.fn.has("nvim-0.8") then
     return
 end
 
-require('config.plugins')
-require('config.setup')
-require('config.presence')
-require('config.feline')
-require('config.todo-comments')
-require('config.mappings')
-require('config.language-servers')
-require('config.gitsigns')
-require('config.telescope')
-require('config.nvimtree')
-require('config.completion')
-require('config.treesitter')
-require('config.leap')
-require('config.termdebug')
-require('config.autopairs')
-require('config.neorg')
-require('config.laravel')
+require('config')
