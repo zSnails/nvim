@@ -1,11 +1,10 @@
--- vim.cmd [[ packadd packer.nvim ]]
-
 pcall(vim.cmd, "packadd packer.nvim")
 
 local installed, packer = pcall(require, 'packer')
 
 if not installed then
     require('config.bootstrap').install()
+    return
 end
 
 packer.startup(function(use)
