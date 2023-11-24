@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: param-type-mismatch
 pcall(vim.cmd, "packadd packer.nvim")
 
 local installed, packer = pcall(require, 'packer')
@@ -9,6 +10,7 @@ end
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
+    use 'folke/neodev.nvim'
 
     use 'alaviss/nim.nvim'
 
@@ -33,13 +35,12 @@ packer.startup(function(use)
 
     use 'ARM9/arm-syntax-vim'
 
-    use {
-        'zSnails/cityscape.nvim',
-        branch = "color-update"
-    }
+    -- use {
+    --     'zSnails/cityscape.nvim',
+    --     branch = "color-update"
+    -- }
 
     use 'freddiehaddad/feline.nvim'
-
 
     use 'savq/melange'
 
@@ -55,7 +56,7 @@ packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
 
     -- pywal theme
-    use 'dylanaraps/wal.vim'
+    use 'AlphaTechnolog/pywal.nvim'
 
     -- tokyo night theme
     use 'folke/tokyonight.nvim'

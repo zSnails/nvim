@@ -21,9 +21,10 @@ local servers = {
     zls = {},
     nimls = {},
     texlab = {},
-    vuels = {
-        cmd = { "vls", "--stdio" }
-    },
+    -- volar = {
+    --     cmd = { "vls", "--stdio" }
+    -- },
+    volar = { filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' } },
     phpactor = {
         cmd = { "phpactor", "language-server", "-vvv" }
     },
@@ -31,23 +32,34 @@ local servers = {
     jdtls = {},
     gopls = {},
     emmet_ls = {},
-    pyright = {},
+    pyright = {
+        settings = {
+            python = {
+                analysis = {
+                    autoSearchPaths = true,
+                    -- diagnosticMode = "openFilesOnly",
+                    diagnosticMode = "workspace",
+                    useLibraryCodeForTypes = true
+                }
+            }
+        }
+    },
     omnisharp = {
         cmd = { "dotnet", "/usr/lib/omnisharp-roslyn/OmniSharp.dll" }
     },
     lua_ls = {
         settings = {
             Lua = {
-                runtime = {
-                    version = 'LuaJIT',
-                },
-                diagnostics = {
-                    globals = { 'vim' },
-                },
-                workspace = {
-                    library = vim.api.nvim_get_runtime_file("", true),
-                    checkThirdParty = false,
-                },
+                -- runtime = {
+                --     version = 'LuaJIT',
+                -- },
+                -- diagnostics = {
+                --     globals = { 'vim' },
+                -- },
+                -- workspace = {
+                --     library = vim.api.nvim_get_runtime_file("", true),
+                --     checkThirdParty = false,
+                -- },
                 telemetry = {
                     enable = false,
                 },
