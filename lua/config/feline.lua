@@ -184,8 +184,7 @@ component.lsp = {
                 local content = string.format("%%<%s", spinners[frame + 1])
                 return content or ""
             else
-                -- return "לּ LSP"
-                return " " .. clients[1].name:upper()
+                return " " .. clients[1].name
             end
         end
         return ""
@@ -246,7 +245,7 @@ component.scroll_bar = {
             position = " BOT"
         else
             ---@diagnostic disable-next-line: cast-local-type
-            position = chars[math.floor(line_ratio * #chars)] .. position
+            position = chars[math.floor(line_ratio * #chars)] .. position .. '%%'
         end
         return position
     end,
@@ -312,5 +311,3 @@ feline.setup({
     theme = theme,
     vi_mode_colors = mode_theme,
 })
-
----vim:filetype=lua
