@@ -8,4 +8,6 @@ if not vim.fn.has("nvim-0.8") then
     return
 end
 
-require('config')
+require('config.setup')
+require('manager')
+require('config.mappings')

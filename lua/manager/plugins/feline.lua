@@ -1,10 +1,3 @@
----depcends on https://github.com/feline-nvim/feline.nvim
-local present, feline = pcall(require, "feline")
-
-if not present then
-    return
-end
-
 local theme = {
     aqua = "#82aaff",
     bg = "#011627",
@@ -59,8 +52,6 @@ local mode_theme = {
 
 local component = {}
 
-local provider = require("feline.providers.vi_mode")
-
 component.vim_mode = {
     provider = ' ',
 
@@ -69,6 +60,7 @@ component.vim_mode = {
     -- end,
 
     hl = function()
+        local provider = require("feline.providers.vi_mode")
         return {
             bg = "gray",
             fg = provider.get_mode_color(),
@@ -306,8 +298,17 @@ local components = {
     },
 }
 
-feline.setup({
-    components = components,
-    theme = theme,
-    vi_mode_colors = mode_theme,
-})
+-- feline.setup({
+--  components = components,
+-- theme = theme,
+-- vi_mode_colors = mode_theme,
+-- })
+
+return {
+    'freddiehaddad/feline.nvim',
+    opts = {
+        components = components,
+        theme = theme,
+        vi_mode_colors = mode_theme,
+    },
+}
