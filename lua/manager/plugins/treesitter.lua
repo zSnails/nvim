@@ -24,5 +24,6 @@ return {
         highlight = {
             enable = true,
         },
-    }
+    },
+    main = "nvim-treesitter.configs",
 }
