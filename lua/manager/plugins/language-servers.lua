@@ -2,7 +2,9 @@ local on_attach = require('config.mappings').on_attach_func
 local servers = {
     zls = {},
     nimls = {},
+    eslint = {},
     texlab = {},
+    kotlin_language_server = {},
     -- volar = {
     --     cmd = { "vls", "--stdio" }
     -- },
@@ -50,7 +52,7 @@ local servers = {
     },
     clangd = {},
     rust_analyzer = {},
-    tsserver = {},
+    -- tsserver = {},
     fsautocomplete = {},
     gdscript = {
         on_attach = function(client)
