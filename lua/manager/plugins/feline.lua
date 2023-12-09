@@ -128,6 +128,7 @@ component.diagnostic_errors = {
     hl = {
         fg = "red",
     },
+    right_sep = " "
 }
 
 component.diagnostic_warnings = {
@@ -135,6 +136,7 @@ component.diagnostic_warnings = {
     hl = {
         fg = "yellow",
     },
+    right_sep = " "
 }
 
 component.diagnostic_hints = {
@@ -142,10 +144,12 @@ component.diagnostic_hints = {
     hl = {
         fg = "aqua",
     },
+    right_sep = " "
 }
 
 component.diagnostic_info = {
     provider = "diagnostic_info",
+    right_sep = " "
 }
 
 component.lsp = {
