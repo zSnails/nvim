@@ -2,12 +2,10 @@ local on_attach = require('config.mappings').on_attach_func
 local servers = {
     zls = {},
     nimls = {},
+    lemminx = {},
     eslint = {},
     texlab = {},
     kotlin_language_server = {},
-    -- volar = {
-    --     cmd = { "vls", "--stdio" }
-    -- },
     volar = { filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' } },
     phpactor = {
         cmd = { "phpactor", "language-server", "-vvv" }
