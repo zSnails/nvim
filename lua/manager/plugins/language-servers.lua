@@ -27,7 +27,7 @@ local servers = {
         }
     },
     omnisharp = {
-        cmd = { "dotnet", "/usr/lib/omnisharp-roslyn/OmniSharp.dll" }
+        cmd = { "omnisharp" }
     },
     lua_ls = {
         settings = {
@@ -50,7 +50,7 @@ local servers = {
     },
     clangd = {},
     rust_analyzer = {},
-    -- tsserver = {},
+    tsserver = {},
     fsautocomplete = {},
     gdscript = {
         on_attach = function(client)
