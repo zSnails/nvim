@@ -35,13 +35,13 @@ local servers = {
                 -- runtime = {
                 --     version = 'LuaJIT',
                 -- },
-                -- diagnostics = {
-                --     globals = { 'vim' },
-                -- },
-                -- workspace = {
-                --     library = vim.api.nvim_get_runtime_file("", true),
-                --     checkThirdParty = false,
-                -- },
+                diagnostics = {
+                    globals = { 'vim' },
+                },
+                workspace = {
+                    library = vim.api.nvim_get_runtime_file("", true),
+                    checkThirdParty = false,
+                },
                 telemetry = {
                     enable = false,
                 },
@@ -70,7 +70,8 @@ local servers = {
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
-        'hrsh7th/cmp-nvim-lsp'
+        'hrsh7th/cmp-nvim-lsp',
+        'folke/neodev.nvim',
     },
     config = function(_, _)
         local lsp_config = require('lspconfig')
