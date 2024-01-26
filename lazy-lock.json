@@ -15,6 +15,7 @@
   "neorg": { "branch": "main", "commit": "bf3daa2229c60f92f48ac6d7db3049b65fd01371" },
   "nvim-autopairs": { "branch": "master", "commit": "0f04d78619cce9a5af4f355968040f7d675854a1" },
   "nvim-cmp": { "branch": "main", "commit": "0b751f6beef40fd47375eaf53d3057e0bfa317e4" },
+  "nvim-lint": { "branch": "master", "commit": "8df53b5dde8ea80f0a039775777eae6648a10229" },
   "nvim-lspconfig": { "branch": "master", "commit": "cf3dd4a290084a868fac0e2e876039321d57111c" },
   "nvim-tree.lua": { "branch": "master", "commit": "7e5c6731804bd892ace56692784290d2fc5a0f74" },
   "nvim-treesitter": { "branch": "master", "commit": "67536f4057e4901e37805708bcfdd3d9abacfd26" },
