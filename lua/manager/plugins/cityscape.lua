@@ -1,6 +1,6 @@
 return {
-    dir = "~/projects/cityscape.nvim",
+    dir = "zSnails/cityscape.nvim",
     config = function()
-        vim.cmd.colorscheme("cityscape")
+        -- vim.cmd.colorscheme("cityscape")
     end
 }

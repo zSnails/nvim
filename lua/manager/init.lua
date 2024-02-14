@@ -12,5 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.cmd [[ packadd termdebug ]]
+
+vim.g.termdebug_wide = 1
+
 local plugins = require("manager.plugins")
 require("lazy").setup(plugins)
