@@ -4,7 +4,7 @@ return {
     config = function()
         local nnk = require("NeoNeedsKey")
         nnk.setup {
-            timeout = 0
+            timeout = 5
         }
     end
 }
