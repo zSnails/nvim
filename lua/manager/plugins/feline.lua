@@ -1,18 +1,18 @@
 local theme = {
-    aqua = "#82aaff",
-    bg = "#011627",
-    blue = "#5e97ec",
-    cyan = "#7fdbca",
-    darkred = "#fc514e",
-    fg = "#b2b2b2",
-    gray = "#14364c",
-    green = "#a1cd5e",
-    lime = "#54CED6",
-    orange = "#f78c6c",
-    pink = "#ff5874",
-    purple = "#ae81ff",
-    red = "#ff5874",
-    yellow = "#ffcb8b"
+    aqua = "#6a9589",
+    bg = "#16161d",
+    blue = "#223249",
+    cyan = "#7fb4ca",
+    darkred = "#e82424",
+    fg = "#dcd7ba",
+    gray = "#717c7c",
+    green = "#76946a",
+    lime = "#98bb6c",
+    orange = "#ffa066",
+    pink = "#d27e99",
+    purple = "#957fb8",
+    red = "#ff5d62",
+    yellow = "#e6c384"
 }
 
 -- local theme = {
@@ -57,7 +57,7 @@ component.vim_mode = {
     hl = function()
         local provider = require("feline.providers.vi_mode")
         return {
-            bg = "gray",
+            bg = "blue",
             fg = provider.get_mode_color(),
             style = "bold",
             name = "NeovimModeHLColor",
@@ -181,7 +181,7 @@ component.lsp = {
         local progress = vim.lsp.util.get_progress_messages()[1]
         return {
             fg = progress and "yellow" or "green",
-            bg = "gray",
+            bg = "blue",
             style = "bold",
         }
     end,
@@ -195,7 +195,7 @@ component.file_size = {
     },
     hl = {
         fg = "fg",
-        bg = "gray",
+        bg = "blue",
         style = "bold",
     },
     left_sep = "",
@@ -211,7 +211,7 @@ component.file_type = {
     },
     hl = {
         fg = "fg",
-        bg = "gray",
+        bg = "blue",
     },
     left_sep = "block",
     right_sep = "block",
@@ -259,7 +259,7 @@ component.scroll_bar = {
         return {
             fg = fg,
             style = style,
-            bg = "gray",
+            bg = "blue",
         }
     end,
     left_sep = "block",
