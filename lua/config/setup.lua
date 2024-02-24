@@ -1,4 +1,3 @@
--- NOTE: options
 vim.o.laststatus = 3
 vim.o.number = true
 vim.o.relativenumber = true
@@ -23,29 +22,5 @@ vim.o.signcolumn = "yes"
 -- vim.o can only allow for basic usage, while vim.opt can do more stuff
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
--- these highlight groups disable all diff and window separator background
--- colors so that they're not messing with my beautiful color scheme setup
-
--- vim.cmd [[silent! colorscheme kanagawa]]
-
--- uncomment this when using kanagawa or tokyonight
-
--- vim.cmd [[
--- highlight WinSeparator guibg=NONE
--- highlight Normal guibg=NONE ctermbg=NONE
--- highlight NonText guibg=NONE ctermbg=NONE
--- highlight NvimTreeNormal guibg=NONE ctermbg=NONE
--- highlight LineNr guibg=NONE ctermbg=NONE
--- ]]
-
--- highlight DiffAdd guibg=NONE
--- highlight DiffText guibg=NONE
--- highlight DiffChange guibg=NONE
--- highlight DiffDelete guibg=NONE
--- highlight LineNr guibg=NONE
--- highlight SignColumn guibg=NONE
--- highlight GitSignsAdd guibg=NONE
--- highlight GitSignsChange guibg=NONE
--- highlight GitSignsDelete guibg=NONE
--- highlight GitSignsUntracker guibg=NONE
--- ]]
+vim.cmd.packadd("termdebug")
+vim.g.termdebug_wide = 1
