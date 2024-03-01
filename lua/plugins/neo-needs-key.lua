@@ -1,5 +1,5 @@
 return {
-    -- "zSnails/NeoNeedsKey",
+    "zSnails/NeoNeedsKey",
     dir = "~/projects/NeoNeedsKey",
     dev = false,
     config = function()
