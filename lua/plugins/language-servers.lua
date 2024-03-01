@@ -6,7 +6,7 @@ local servers = {
     eslint = {},
     texlab = {},
     kotlin_language_server = {},
-    volar = { filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' } },
+    volar = { filetypes = { 'vue' } },
     phpactor = {
         cmd = { "phpactor", "language-server", "-vvv" }
     },
