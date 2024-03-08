@@ -51,9 +51,49 @@ local mode_theme = {
 }
 
 local component = {}
+local mode_alias = {
+    ['n'] = '󰰓 ',
+    ['no'] = '󰲞 ',
+    ['nov'] = '󰲞 ',
+    ['noV'] = '󰲞 ',
+    ['no'] = '󰲞 ',
+    ['niI'] = '󰰓 ',
+    ['niR'] = '󰰓 ',
+    ['niV'] = '󰰓 ',
+    ['v'] = '󰰫 ',
+    ['vs'] = '󰰫 ',
+    ['V'] = '󰰍 ',
+    ['Vs'] = '󰰍 ',
+    [''] = '󰯯 ',
+    ['s'] = '󰯯 ',
+    ['s'] = '󰰢 ',
+    ['S'] = '󰰢 ',
+    [''] = '󰯯 ',
+    ['i'] = '󰰄 ',
+    ['ic'] = '󰰄 ',
+    ['ix'] = '󰰄 ',
+    ['R'] = '󰰟 ',
+    ['Rc'] = '󰰟 ',
+    ['Rv'] = '󰰟 ',
+    ['Rx'] = '󰰟 ',
+    ['c'] = '󰯲 ',
+    ['cv'] = '󰯲 ',
+    ['ce'] = '󰯲 ',
+    ['r'] = '󰯸 ',
+    ['rm'] = '󰰐 ',
+    ['r?'] = '󰯲 ',
+    ['!'] = '󰰢 ',
+    ['t'] = '󰰥 ',
+    ['nt'] = '󰰥 ',
+    ['null'] = '󱃓 ',
+}
+
+local function vim_mode(_, _)
+    return mode_alias[vim.api.nvim_get_mode().mode]
+end
 
 component.vim_mode = {
-    provider = ' ',
+    provider = vim_mode,
     hl = function()
         local provider = require("feline.providers.vi_mode")
         return {
