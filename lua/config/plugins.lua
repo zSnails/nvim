@@ -31,6 +31,4 @@ packer.startup(function(use)
 
     use 'tjdevries/colorbuddy.vim'
     use 'bkegley/gloombuddy'
-    use 'tpope/vim-dadbod'
-    use 'kristijanhusak/vim-dadbod-ui'
 end)
