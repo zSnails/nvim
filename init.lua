@@ -21,6 +21,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.db_ui_use_nerd_fonts = true
 
 require('config')
 require("lazy").setup("plugins")
