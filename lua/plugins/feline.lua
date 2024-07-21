@@ -190,14 +190,14 @@ component.lsp = {
             return ""
         end
 
-        local progress = vim.lsp.util.get_progress_messages()[1]
+        local progress = vim.lsp.status()
         if vim.o.columns < 120 then
             return ""
         end
 
-        local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+        local clients = vim.lsp.get_clients({ bufnr = 0 })
         if #clients ~= 0 then
-            if progress then
+            if progress ~= "" then
                 -- NOTE: These are fira code's spinners, they might or might not work on other fonts
                 local spinners = {
                     "\u{ee06}",
@@ -207,7 +207,7 @@ component.lsp = {
                     "\u{ee0A}",
                     "\u{ee0B}",
                 }
-                local ms = vim.loop.hrtime() / 1000000
+                local ms = vim.uv.hrtime() / 1000000
                 local frame = math.floor(ms / 120) % #spinners
                 local content = string.format("%%<%s", spinners[frame + 1])
                 return content or ""
@@ -218,9 +218,9 @@ component.lsp = {
         return ""
     end,
     hl = function()
-        local progress = vim.lsp.util.get_progress_messages()[1]
+        local progress = vim.lsp.status()
         return {
-            fg = progress and "yellow" or "green",
+            fg = progress ~= "" and "yellow" or "green",
             bg = "blue",
             style = "bold",
         }
