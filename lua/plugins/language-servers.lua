@@ -2,6 +2,7 @@ local on_attach = require('config.mappings').on_attach_func
 local servers = {
     glsl_analyzer = {},
     zls = {},
+    templ = {},
     nimls = {},
     lemminx = {},
     eslint = {},
