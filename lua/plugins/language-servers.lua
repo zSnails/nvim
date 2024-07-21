@@ -15,7 +15,9 @@ local servers = {
     cssls = {},
     jdtls = {},
     gopls = {},
-    emmet_ls = {},
+    emmet_ls = {
+        filetypes = { "astro", "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "svelte", "typescriptreact", "vue", "templ" }
+    },
     pyright = {
         settings = {
             python = {
