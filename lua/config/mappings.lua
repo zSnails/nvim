@@ -8,6 +8,10 @@ local function vmap(key, action)
     vim.keymap.set("v", key, action, { silent = true })
 end
 
+local function imap(key, action)
+    vim.keymap.set("i", key, action, { silent = true })
+end
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vmap("J", ":m '>+1<CR>gv=gv")
@@ -26,6 +30,7 @@ function Mappings.on_attach_func()
     nmap('gr', vim.lsp.buf.references)
     nmap('<leader>f', vim.lsp.buf.format)
     nmap('<leader>co', vim.lsp.buf.document_symbol)
+    imap('<C-h>', vim.lsp.buf.signature_help)
 end
 
 return Mappings
