@@ -2,13 +2,14 @@ local on_attach = require('config.mappings').on_attach_func
 local servers = {
     glsl_analyzer = {},
     zls = {},
+    typst_lsp = {},
     templ = {},
     nimls = {},
     lemminx = {},
     eslint = {},
     texlab = {},
     kotlin_language_server = {},
-    volar = { filetypes = { 'vue' } },
+    volar = { filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' } },
     phpactor = {
         cmd = { "phpactor", "language-server", "-vvv" }
     },
@@ -54,7 +55,22 @@ local servers = {
     },
     clangd = {},
     rust_analyzer = {},
-    tsserver = {},
+    tsserver = {
+        init_options = {
+            plugins = {
+                {
+                    name = "@vue/typescript-plugin",
+                    location = "/usr/lib/node_modules/@vue/typescript-plugin",
+                    languages = { "javascript", "typescript", "vue" },
+                }
+            }
+        },
+        filetypes = {
+            "javascript",
+            "typescript",
+            "vue"
+        }
+    },
     fsautocomplete = {},
     gdscript = {
         on_attach = function(client)
