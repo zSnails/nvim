@@ -1,6 +1,7 @@
 {
   "Colorizer": { "branch": "master", "commit": "7db0e0dd8adfccab35655f5b6db805caa0fef49a" },
   "LuaSnip": { "branch": "master", "commit": "e808bee352d1a6fcf902ca1a71cee76e60e24071" },
+  "NeoNeedsKey": { "branch": "master", "commit": "99f6295b2d687988e7a0977e8c8f79649e306caa" },
   "barbar.nvim": { "branch": "master", "commit": "ca1326f7d87acfd47b0cbeeb3bef98cec73a92be" },
   "cityscape.nvim": { "branch": "master", "commit": "ac89d6cdd004f81708d0e5a5ed02b5478ff2f55c" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
