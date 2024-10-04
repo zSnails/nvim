@@ -1,46 +1,98 @@
-# Welcome
+# nvim/
 
-This is my public neovim configuration.
+<a href="https://dotfyle.com/zSnails/nvim"><img src="https://dotfyle.com/zSnails/nvim/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/zSnails/nvim"><img src="https://dotfyle.com/zSnails/nvim/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/zSnails/nvim"><img src="https://dotfyle.com/zSnails/nvim/badges/plugin-manager?style=flat" /></a>
 
-Since I felt it was ready to be made public I decided to do so.
 
-I will be updating this with more stuff as time goes on.
+## Install Instructions
 
-# Plugins
+ > Install requires Neovim 0.9+. Always review the code before installing a configuration.
 
-- antlr4
-- autopairs
-- barbar
-- challenger-deep
-- cityscape
-- colorizer
-- commentary
-- completion
-- dadbod
-- devicons
-- feline
-- gitsigns
-- kanagawa
-- language-servers
-- neo-needs-key
-- neodev
-- neorg
-- nvim-lint
-- nvimtree
-- oil
-- plenary
-- presence
-- qbe
-- telescope
-- todo-comments
-- treesitter
-- yuck
+Clone the repository and install the plugins:
+
+```sh
+git clone git@github.com:zSnails/nvim ~/.config/zSnails/nvim
+NVIM_APPNAME=zSnails/nvim/ nvim --headless +"Lazy! sync" +qa
+```
+
+Open Neovim with this config:
+
+```sh
+NVIM_APPNAME=zSnails/nvim/ nvim
+```
+
+## Plugins
+
+### colorscheme
+
++ [folke/tokyonight.nvim](https://dotfyle.com/plugins/folke/tokyonight.nvim)
++ [sainnhe/gruvbox-material](https://dotfyle.com/plugins/sainnhe/gruvbox-material)
++ [bkegley/gloombuddy](https://dotfyle.com/plugins/bkegley/gloombuddy)
++ [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)
+### comment
+
++ [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
+### completion
+
++ [hrsh7th/nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)
+### editing-support
+
++ [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
+### file-explorer
+
++ [X3eRo0/dired.nvim](https://dotfyle.com/plugins/X3eRo0/dired.nvim)
++ [nvim-tree/nvim-tree.lua](https://dotfyle.com/plugins/nvim-tree/nvim-tree.lua)
+### fuzzy-finder
+
++ [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
+### git
+
++ [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
+### icon
+
++ [nvim-tree/nvim-web-devicons](https://dotfyle.com/plugins/nvim-tree/nvim-web-devicons)
+### lsp
+
++ [mfussenegger/nvim-lint](https://dotfyle.com/plugins/mfussenegger/nvim-lint)
++ [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
+### media
+
++ [andweeb/presence.nvim](https://dotfyle.com/plugins/andweeb/presence.nvim)
+### note-taking
+
++ [nvim-neorg/neorg](https://dotfyle.com/plugins/nvim-neorg/neorg)
+### nvim-dev
+
++ [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
++ [folke/neodev.nvim](https://dotfyle.com/plugins/folke/neodev.nvim)
++ [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)
+### plugin-manager
+
++ [wbthomason/packer.nvim](https://dotfyle.com/plugins/wbthomason/packer.nvim)
++ [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
+### snippet
+
++ [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
+### statusline
+
++ [freddiehaddad/feline.nvim](https://dotfyle.com/plugins/freddiehaddad/feline.nvim)
+### syntax
+
++ [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
++ [nvim-treesitter/nvim-treesitter-textobjects](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter-textobjects)
+### tabline
+
++ [romgrk/barbar.nvim](https://dotfyle.com/plugins/romgrk/barbar.nvim)
+## Language Servers
+
++ astro
++ html
++ omnisharp
++ phpactor
++ svelte
 
 # Keybinds
-
-## Leader key
-
-The leader key I use is just the space key " "
 
 ### Bindings
 
