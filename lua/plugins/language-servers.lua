@@ -2,8 +2,12 @@ local on_attach = require('config.mappings').on_attach_func
 local servers = {
     glsl_analyzer = {},
     zls = {},
+    ols = {},
     hls = {},
-    typst_lsp = {},
+    typst_lsp = {
+        offset_encoding = "utf-8",
+    },
+    neocmake = {},
     templ = {},
     nimls = {},
     lemminx = {},
