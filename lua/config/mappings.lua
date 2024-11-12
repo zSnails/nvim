@@ -20,6 +20,7 @@ nmap("<leader>bn", ":bn<CR>")
 nmap("<leader>bp", ":bp<CR>")
 nmap("<leader>bd", ":bd<CR>")
 nmap("<leader>bc", ":clo<CR>")
+nmap("<M-b>", ":Explore<CR>")
 -- lsp mapping functions
 function Mappings.on_attach_func()
     nmap('gD', vim.lsp.buf.declaration)
