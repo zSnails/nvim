@@ -10,7 +10,7 @@ vim.o.background = 'dark'
 vim.o.termguicolors = true
 vim.o.showmode = false
 vim.o.showcmd = true
-vim.o.clipboard = 'unnamed'
+-- vim.o.clipboard = 'unnamedplus'
 vim.o.ruler = false
 vim.o.wrap = false
 vim.o.swapfile = true -- never disable this again
@@ -24,3 +24,4 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 vim.cmd.packadd("termdebug")
 vim.g.termdebug_wide = 1
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
