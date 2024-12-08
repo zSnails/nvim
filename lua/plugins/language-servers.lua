@@ -4,9 +4,9 @@ local servers = {
     zls = {},
     ols = {},
     hls = {},
-    typst_lsp = {
-        offset_encoding = "utf-8",
-    },
+    -- typst_lsp = {
+    --     offset_encoding = "utf-8",
+    -- },
     neocmake = {},
     templ = {},
     nimls = {},
