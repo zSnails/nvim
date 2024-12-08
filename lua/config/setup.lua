@@ -26,4 +26,4 @@ vim.cmd.packadd("termdebug")
 vim.g.termdebug_wide = 1
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 vim.g.netrw_banner = false
-vim.g.netrw_liststyle = 3
+-- vim.g.netrw_liststyle = 3
