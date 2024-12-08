@@ -42,7 +42,8 @@ return {
         vim.keymap.set('n', "<leader>fh", telescope_builtins.help_tags, { silent = true })
         vim.keymap.set('n', "<leader>ft", telescope_builtins.treesitter, { silent = true })
         vim.keymap.set('n', "<leader>tt",
-            ":TodoTelescope theme=ivy initial_mode=normal previewer=false layout_config={bottom_pane={height=12}}<CR>")
+            ":TodoTelescope theme=ivy initial_mode=normal previewer=false layout_config={bottom_pane={height=12}}<CR>",
+            { silent = true })
         vim.keymap.set('n', "<leader>di", telescope_builtins.diagnostics, { silent = true })
     end
 }
