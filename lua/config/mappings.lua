@@ -14,6 +14,7 @@ end
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
+vim.opt.path = "**"
 vmap("J", ":m '>+1<CR>gv=gv")
 vmap("K", ":m '<-2<CR>gv=gv")
 nmap("<leader>bn", ":bn<CR>")
@@ -21,6 +22,18 @@ nmap("<leader>bp", ":bp<CR>")
 nmap("<leader>bd", ":bd<CR>")
 nmap("<leader>bc", ":clo<CR>")
 nmap("<M-b>", ":Explore<CR>")
+
+-- Custom keymaps to remove telescope
+vim.keymap.set("n", "<leader>ff", ":find ")
+vim.keymap.set("n", "<leader>fg", function()
+    local result = vim.fn.input("What u lookin' for boss?> ")
+    if result == "" then
+        return
+    end
+    vim.cmd(":grep " .. result)
+    vim.cmd(":copen")
+end)
+vim.keymap.set("n", "<leader>tt", ":TodoQuickFix<CR>", { silent = true })
 -- lsp mapping functions
 function Mappings.on_attach_func()
     nmap('gD', vim.lsp.buf.declaration)
