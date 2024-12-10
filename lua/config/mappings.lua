@@ -25,14 +25,7 @@ nmap("<M-b>", ":Explore<CR>")
 
 -- Custom keymaps to remove telescope
 vim.keymap.set("n", "<leader>ff", ":find ")
-vim.keymap.set("n", "<leader>fg", function()
-    local result = vim.fn.input("What u lookin' for boss?> ")
-    if result == "" then
-        return
-    end
-    vim.cmd(":grep " .. result)
-    vim.cmd(":copen")
-end)
+vim.keymap.set("n", "<leader>fg", ":Grep<CR>")
 vim.keymap.set("n", "<leader>tt", ":TodoQuickFix<CR>", { silent = true })
 -- lsp mapping functions
 function Mappings.on_attach_func()
