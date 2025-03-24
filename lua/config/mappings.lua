@@ -15,6 +15,8 @@ end
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.opt.path = "**"
+vim.opt.wildignore = "**/node_modules/**"
+
 vmap("J", ":m '>+1<CR>gv=gv")
 vmap("K", ":m '<-2<CR>gv=gv")
 nmap("<leader>bn", ":bn<CR>")
