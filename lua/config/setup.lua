@@ -15,6 +15,7 @@ vim.o.ruler = false
 vim.o.wrap = false
 vim.o.swapfile = true -- never disable this again
 vim.o.conceallevel = 3
+vim.o.grepprg = "rg --vimgrep"
 
 vim.o.signcolumn = "yes"
 
