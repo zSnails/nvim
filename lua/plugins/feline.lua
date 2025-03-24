@@ -257,6 +257,36 @@ component.file_type = {
     right_sep = "block",
 }
 
+
+component.tree_sitter = {
+    provider = function()
+        local tree_sitter = require("nvim-treesitter")
+        local f = tree_sitter.statusline({
+            indicator_size = 300,
+            type_patterns = { 'class', 'function', 'method', 'if', 'for', 'else', 'object' },
+            separator = ' 󰿟 ',
+            -- transform_fn = function(line, node)
+            --     print(vim.inspect(node))
+            --     if node == tree_sitter.function_declaration then
+            --         vim.print(string.format("%s", node))
+            --     end
+            --     return line
+            -- end,
+            allow_duplicates = false,
+        })
+
+        if f == nil then
+            return ""
+        end
+        local context = string.format("%s", f)
+        if context == "" then
+            return ""
+        end
+
+        return "󱔁  " .. context
+    end
+}
+
 component.scroll_bar = {
     provider = function()
         local chars = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
@@ -336,6 +366,7 @@ local components = {
 
 return {
     'freddiehaddad/feline.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
     opts = {
         components = components,
         theme = theme,
