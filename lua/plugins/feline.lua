@@ -347,6 +347,7 @@ local left = {
     component.git_change,
 }
 local middle = {
+    component.tree_sitter,
 }
 local right = {
     component.diagnostic_errors,
