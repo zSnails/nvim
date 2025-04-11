@@ -10,6 +10,7 @@ vim.o.background = 'dark'
 vim.o.termguicolors = true
 vim.o.showmode = false
 vim.o.showcmd = true
+vim.o.showcmdloc = "statusline"
 -- vim.o.clipboard = 'unnamedplus'
 vim.o.ruler = false
 vim.o.wrap = false
@@ -38,3 +39,5 @@ vim.api.nvim_create_user_command("Grep", function()
     vim.cmd(":grep " .. result)
     vim.cmd(":copen")
 end, {})
+
+vim.diagnostic.config({ virtual_text = true })
