@@ -1,3 +1,4 @@
 plugin/
 colors/
 .zeta
+.env.lua
