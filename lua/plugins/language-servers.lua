@@ -4,6 +4,12 @@ local servers = {
     zls = {},
     ols = {},
     hls = {},
+    air = {},
+    intelephense = {
+        init_options = {
+            licenceKey = os.getenv("HOME") .. '/intelephense/key.txt'
+        },
+    },
     -- typst_lsp = {
     --     offset_encoding = "utf-8",
     -- },
