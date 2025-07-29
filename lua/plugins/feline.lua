@@ -257,6 +257,9 @@ component.file_type = {
     right_sep = "block",
 }
 
+component.command = {
+    provider = "%S"
+}
 
 component.tree_sitter = {
     provider = function()
@@ -347,7 +350,8 @@ local left = {
     component.git_change,
 }
 local middle = {
-    component.tree_sitter,
+    -- component.tree_sitter,
+    component.command,
 }
 local right = {
     component.diagnostic_errors,
