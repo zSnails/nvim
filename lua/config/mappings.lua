@@ -26,11 +26,11 @@ nmap("<leader>bc", ":clo<CR>")
 nmap("<M-b>", ":Explore<CR>")
 
 -- Custom keymaps to remove telescope
-vim.keymap.set("n", "<leader>ff", ":find ")
-vim.keymap.set("n", "<leader>fg", ":Grep<CR>")
+-- vim.keymap.set("n", "<leader>ff", ":find ")
+-- vim.keymap.set("n", "<leader>fg", ":Grep<CR>")
 vim.keymap.set("n", "<leader>tt", ":TodoQuickFix<CR>", { silent = true })
 -- lsp mapping functions
-function Mappings.on_attach_func()
+function Mappings.on_attach_func(client, bufnr)
     nmap('gD', vim.lsp.buf.declaration)
     nmap('gd', vim.lsp.buf.definition)
     nmap('K', vim.lsp.buf.hover)
