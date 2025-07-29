@@ -39,7 +39,11 @@ function Mappings.on_attach_func(client, bufnr)
     nmap('gr', vim.lsp.buf.references)
     nmap('<leader>f', vim.lsp.buf.format)
     nmap('<leader>co', vim.lsp.buf.document_symbol)
+    nmap('<leader>gl', vim.diagnostic.open_float)
     imap('<C-h>', vim.lsp.buf.signature_help)
+    if client.server_capabilities.inlayHintProvider then
+        vim.lsp.inlay_hint.enable(true)
+    end
 end
 
 return Mappings
