@@ -82,6 +82,7 @@ local servers = {
             "vue"
         }
     },
+    jsonls = {},
     fsautocomplete = {},
     gdscript = {
         on_attach = function(client)
