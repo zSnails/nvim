@@ -5,6 +5,9 @@ local servers = {
     ols = {},
     hls = {},
     air = {},
+    qmlls = {
+        cmd = {"qmlls6", "-E"}
+    },
     intelephense = {
         init_options = {
             licenceKey = os.getenv("HOME") .. '/intelephense/key.txt'
