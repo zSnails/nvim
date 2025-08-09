@@ -370,7 +370,8 @@ local components = {
 }
 
 return {
-    'freddiehaddad/feline.nvim',
+    -- 'freddiehaddad/feline.nvim',
+    'second2050/feline.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     opts = {
         components = components,
