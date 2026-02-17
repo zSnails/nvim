@@ -29,6 +29,9 @@ local servers = {
     },
     cssls = {},
     jdtls = {},
+    -- java_language_server = {
+    --     -- cmd = "/home/ayaka/java-language-server/dist/lang_server_linux.sh"
+    -- },
     gopls = {},
     emmet_ls = {
         filetypes = { "astro", "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "svelte", "typescriptreact", "vue", "templ" }
