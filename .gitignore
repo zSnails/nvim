@@ -2,3 +2,4 @@ plugin/
 colors/
 .zeta
 .env.lua
+lazy-lock.json
