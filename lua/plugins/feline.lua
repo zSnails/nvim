@@ -96,9 +96,10 @@ component.vim_mode = {
     provider = vim_mode,
     hl = function()
         local provider = require("feline.providers.vi_mode")
+        local mode_color = provider.get_mode_color()
         return {
             bg = "blue",
-            fg = provider.get_mode_color(),
+            fg = mode_color,
             style = "bold",
             name = "NeovimModeHLColor",
         }
