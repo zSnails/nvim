@@ -6,7 +6,7 @@ local servers = {
     hls = {},
     air = {},
     qmlls = {
-        cmd = {"qmlls6", "-E"}
+        cmd = { "qmlls6", "-E" }
     },
     intelephense = {
         init_options = {
