@@ -109,7 +109,7 @@ return {
         'folke/neodev.nvim',
     },
     config = function(_, _)
-        local lsp_config = require('lspconfig')
+        -- local lsp_config = require('lspconfig')
         local nvim_lsp = require('cmp_nvim_lsp')
         local capabilities = nvim_lsp.default_capabilities()
         capabilities.diagnostic = true
@@ -120,7 +120,8 @@ return {
                 on_attach = on_attach,
             }
             local final_table = vim.tbl_extend("keep", server_table, config)
-            lsp_config[server].setup(final_table)
+            vim.lsp.enable(server)
+            vim.lsp.config(server, final_table)
         end
     end,
 }
