@@ -1,7 +1,7 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
-        { 'nvim-treesitter/playground' },
+        -- { 'nvim-treesitter/playground' },
         { 'nvim-treesitter/nvim-treesitter-textobjects' }
     },
     opts = {
@@ -25,5 +25,5 @@ return {
             enable = true,
         },
     },
-    main = "nvim-treesitter.configs",
+    -- main = "nvim-treesitter.configs",
 }
