@@ -79,11 +79,8 @@ local servers = {
                 }
             }
         },
-        filetypes = {
-            "javascript",
-            "typescript",
-            "vue"
-        }
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+        single_file_support = false,
     },
     jsonls = {},
     fsautocomplete = {},
