@@ -75,7 +75,7 @@ local servers = {
                 {
                     name = "@vue/typescript-plugin",
                     location = "/usr/lib/node_modules/@vue/typescript-plugin",
-                    languages = { "javascript", "typescript", "vue" },
+                    languages = { "vue" },
                 }
             }
         },
