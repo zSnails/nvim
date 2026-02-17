@@ -1,4 +1,14 @@
 local on_attach = require('config.mappings').on_attach_func
+local is_windows = require('extras.os_detection').is_windows
+
+local function get_intelephense_path()
+    if is_windows() then
+        return "THIS_IS_WINDOWS_SO_NO_INTELEPHENSE_PATH"
+    end
+
+    return os.getenv("HOME") .. '/intelephense/key.txt'
+end
+
 local servers = {
     glsl_analyzer = {},
     zls = {},
@@ -9,8 +19,9 @@ local servers = {
         cmd = { "qmlls6", "-E" }
     },
     intelephense = {
+        enable = not is_windows(),
         init_options = {
-            licenceKey = os.getenv("HOME") .. '/intelephense/key.txt'
+            licenceKey = get_intelephense_path()
         },
     },
     -- typst_lsp = {
