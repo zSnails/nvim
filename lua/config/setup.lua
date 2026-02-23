@@ -24,6 +24,8 @@ vim.o.grepprg = "rg --vimgrep"
 vim.o.signcolumn = "yes"
 vim.o.backspace = "indent,eol,start"
 
+vim.opt.fileformats = { "unix", "dos" }
+
 -- NOTE: for my future self, vim.o and vim.opt behave different in the sense that
 -- vim.o can only allow for basic usage, while vim.opt can do more stuff
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
