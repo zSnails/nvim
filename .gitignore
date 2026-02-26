@@ -3,3 +3,4 @@ colors/
 .zeta
 .env.lua
 lazy-lock.json
+lua/config/local-servers.lua
