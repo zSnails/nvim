@@ -1,7 +1,7 @@
-local is_windows = require("extras.os_detection").is_windows
+local functions = require("extras.functions")
 
 return {
     'wakatime/vim-wakatime',
     lazy = false,
-    enabled = not is_windows(),
+    enabled = not functions.is_windows(),
 }
