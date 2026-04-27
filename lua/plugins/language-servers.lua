@@ -11,7 +11,7 @@ return {
         local success, servers = pcall(require, "config.local-servers")
         if not success then
             -- TODO: Si no hay local-servers que no haga nada
-            vim.api.nvim_err_writeln(vim.format("could not load 'config.local-servers': %s", servers))
+            vim.api.nvim_err_writeln(string.format("could not load 'config.local-servers': %s", servers))
             return
         end
 
