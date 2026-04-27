@@ -1,3 +1,0 @@
-return {
-    'jrozner/vim-antlr'
-}
