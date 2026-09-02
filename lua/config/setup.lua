@@ -36,6 +36,9 @@ vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 vim.g.netrw_banner = false
 -- vim.g.netrw_liststyle = 3
 --
+
+vim.opt.list = true
+vim.opt.listchars:append({ trail = '•' })
 vim.api.nvim_create_user_command("Grep", function()
     local result = vim.fn.input("What u lookin' for boss?> ")
     if result == "" then
